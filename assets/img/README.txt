@@ -1,7 +1,10 @@
 이미지 폴더
 
 [사이트에서 실제 사용 중]
-  main_logo.png                  - 기관 로고 (헤더/푸터)
+  main_logo_light.png            - 기관 로고, 어두운 배경용 (헤더/푸터)
+                                   흰 배경을 투명 처리하고 잉크를 흰색으로 반전한 버전.
+                                   원본 로고는 남색(rgb 0,32,128)이라 사이트 배경(#030814)
+                                   위에서 대비가 1.45:1로 거의 보이지 않는다.
   hero-bg.jpg                    - 메인 히어로 배경
   workshop-cancer-genomics.jpg   - 암 유전체 데이터 분석 워크샵      (education.html)
   workshop-depmap.jpg            - 셀라인(DepMap) 분석 워크샵         (education.html)
@@ -11,6 +14,7 @@
   seminar-2024-photo.jpg         - 2024 초청 세미나 현장              (research.html)
 
 [원본 보관용 — 사이트에서는 사용하지 않음]
+  main_logo.png                  - 기관 로고 원본 (흰 배경 / 남색 잉크). 밝은 배경·인쇄용
   hero-bg.png                    - 히어로 배경 원본 (재편집용)
   mockups.png                    - 디자인 시안
 
