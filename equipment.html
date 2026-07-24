@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>장비소개 | 가톨릭정밀의학연구센터</title>
+  <meta name="description" content="NextSeq 1000, GenexusDx, Chromium iX, QX200, 4150 자동전기영동 시스템 등 가톨릭정밀의학연구센터 보유 장비를 소개합니다." />
+  <meta name="author" content="Catholic Precision Medicine Research Center" />
+  <meta name="theme-color" content="#030814" />
+
+  <meta property="og:title" content="장비소개 | 가톨릭정밀의학연구센터" />
+  <meta property="og:description" content="NextSeq 1000, GenexusDx, Chromium iX, QX200, 4150 자동전기영동 시스템 등 가톨릭정밀의학연구센터 보유 장비를 소개합니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AC%3C/text%3E%3C/svg%3E" />
+</head>
+
+<body class="font-sans antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white">본문 바로가기</a>
+
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-navy-950/85 backdrop-blur-lg transition-colors duration-300">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 sm:h-20 lg:px-8">
+      <a href="index.html" class="flex shrink-0 items-center" aria-label="가톨릭정밀의학연구센터 홈">
+        <img src="assets/img/main_logo.png" alt="가톨릭정밀의학연구센터 Catholic Precision Medicine Research Center" class="h-8 w-auto sm:h-10" />
+      </a>
+
+      <nav class="hidden items-center gap-6 lg:flex" aria-label="주요 메뉴">
+        <a href="index.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">Home</a>
+        <a href="about.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">연구소 소개</a>
+        <a href="research.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">연구성과</a>
+        <a href="services.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">분석서비스</a>
+        <a href="equipment.html" aria-current="page" class="text-sm font-semibold text-white">장비소개</a>
+        <a href="education.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">교육정보</a>
+        <a href="notice.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">공지사항</a>
+        <a href="https://en.pmrc.re.kr" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/15 px-4 py-1.5 text-sm font-medium text-mist-300 transition-colors hover:border-white/35 hover:text-white">ENG</a>
+      </nav>
+
+      <button id="navToggle" type="button" class="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-mist-100 transition-colors hover:bg-white/10 lg:hidden" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+          <path data-icon="open" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+          <path data-icon="close" class="hidden" stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobileNav" class="hidden border-t border-white/5 bg-navy-950/95 backdrop-blur-lg lg:hidden" aria-label="모바일 메뉴">
+      <div class="space-y-1 px-5 py-4">
+        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">Home</a>
+        <a href="about.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">연구소 소개</a>
+        <a href="research.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">연구성과</a>
+        <a href="services.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">분석서비스</a>
+        <a href="equipment.html" aria-current="page" class="block rounded-lg bg-white/5 px-3 py-3 text-base font-semibold text-white">장비소개</a>
+        <a href="education.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">교육정보</a>
+        <a href="notice.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">공지사항</a>
+        <a href="https://en.pmrc.re.kr" target="_blank" rel="noopener noreferrer" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">ENG</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="relative isolate overflow-hidden border-b border-white/5 bg-navy-900 pt-32 pb-16 sm:pt-40 sm:pb-24">
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_20%_0%,rgba(43,127,255,0.16),transparent_70%)]" aria-hidden="true"></div>
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="reveal text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">Equipment</p>
+          <h1 class="reveal mt-4 text-3xl font-black tracking-tight text-white sm:text-5xl">연구자를 위한 지원</h1>
+          <p class="reveal mt-6 max-w-2xl text-base leading-relaxed text-mist-300 sm:text-lg">가톨릭정밀의학연구센터가 보유한 유전체 분석 장비를 소개합니다.</p>
+          <div class="rule-gradient reveal mt-8 h-px w-24" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipment" class="bg-navy-950 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">Instruments</p>
+          <h2 class="mt-4 text-2xl font-bold text-white sm:text-3xl">보유 장비</h2>
+          <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
+            <!-- 장비 사진을 assets/img/equipment-1.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
+            <img src="assets/img/equipment-1.png" alt="NextSeq™ 1000 차세대 염기서열 분석기" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+            -->
+            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
+              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
+              </svg>
+            </div>
+            <div class="p-7">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-bold tracking-widest text-brand-500">01</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">NGS</span>
+              </div>
+              <h3 class="mt-3 text-lg font-bold leading-snug text-white">NextSeq™ 1000 차세대 염기서열 분석기</h3>
+              <p class="mt-2 text-sm text-mist-500">Illumina</p>
+            </div>
+          </article>
+          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
+            <!-- 장비 사진을 assets/img/equipment-2.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
+            <img src="assets/img/equipment-2.png" alt="GenexusDx 차세대 염기서열 분석기" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+            -->
+            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
+              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
+              </svg>
+            </div>
+            <div class="p-7">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-bold tracking-widest text-brand-500">02</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">NGS</span>
+              </div>
+              <h3 class="mt-3 text-lg font-bold leading-snug text-white">GenexusDx 차세대 염기서열 분석기</h3>
+              <p class="mt-2 text-sm text-mist-500">Thermo Fisher Scientific</p>
+            </div>
+          </article>
+          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
+            <!-- 장비 사진을 assets/img/equipment-3.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
+            <img src="assets/img/equipment-3.png" alt="Chromium iX 단일세포 자동분석기" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+            -->
+            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
+              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
+              </svg>
+            </div>
+            <div class="p-7">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-bold tracking-widest text-brand-500">03</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">Single-cell</span>
+              </div>
+              <h3 class="mt-3 text-lg font-bold leading-snug text-white">Chromium iX 단일세포 자동분석기</h3>
+              <p class="mt-2 text-sm text-mist-500">10x Genomics</p>
+            </div>
+          </article>
+          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
+            <!-- 장비 사진을 assets/img/equipment-4.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
+            <img src="assets/img/equipment-4.png" alt="QX200 미세방울 디지털 검출장치" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+            -->
+            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
+              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
+              </svg>
+            </div>
+            <div class="p-7">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-bold tracking-widest text-brand-500">04</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">Digital PCR</span>
+              </div>
+              <h3 class="mt-3 text-lg font-bold leading-snug text-white">QX200 미세방울 디지털 검출장치</h3>
+              <p class="mt-2 text-sm text-mist-500">Bio-Rad</p>
+            </div>
+          </article>
+          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
+            <!-- 장비 사진을 assets/img/equipment-5.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
+            <img src="assets/img/equipment-5.png" alt="4150 자동전기영동 시스템" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+            -->
+            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
+              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
+              </svg>
+            </div>
+            <div class="p-7">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-bold tracking-widest text-brand-500">05</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">QC</span>
+              </div>
+              <h3 class="mt-3 text-lg font-bold leading-snug text-white">4150 자동전기영동 시스템</h3>
+              <p class="mt-2 text-sm text-mist-500">Agilent</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="reveal mt-10 flex items-start gap-2.5 text-sm text-mist-500">
+          <svg class="mt-0.5 h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" /><path stroke-linecap="round" d="M12 11v5M12 8h.01" />
+          </svg>
+          장비 사진과 상세 사양은 준비 중입니다. 장비 이용 문의는 <a href="mailto:cmcpmrc@gmail.com" class="ml-1 underline decoration-brand-500/50 underline-offset-4 transition-colors hover:text-brand-400">cmcpmrc@gmail.com</a> 으로 연락 주세요.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5 bg-navy-950 py-14">
+    <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+        <div class="max-w-md">
+          <img src="assets/img/main_logo.png" alt="가톨릭정밀의학연구센터 Catholic Precision Medicine Research Center" class="h-9 w-auto" />
+          <p class="mt-5 text-sm leading-relaxed text-mist-500">
+            이메일 : <a href="mailto:cmcpmrc@gmail.com" class="transition-colors hover:text-brand-400">cmcpmrc@gmail.com</a>
+            &nbsp;|&nbsp; 전화번호 : <a href="tel:0231479008" class="transition-colors hover:text-brand-400">02-3147-9008</a><br />
+            주소 : 서울시 서초구 반포대로 222 가톨릭대학교 의과대학 의생명연구원 3017-2
+          </p>
+        </div>
+
+        <nav class="flex flex-wrap gap-x-8 gap-y-3" aria-label="푸터 메뉴">
+          <a href="about.html" class="text-sm text-mist-400 transition-colors hover:text-white">연구소 소개</a>
+          <a href="research.html" class="text-sm text-mist-400 transition-colors hover:text-white">연구성과</a>
+          <a href="services.html" class="text-sm text-mist-400 transition-colors hover:text-white">분석서비스</a>
+          <a href="equipment.html" class="text-sm text-mist-400 transition-colors hover:text-white">장비소개</a>
+          <a href="education.html" class="text-sm text-mist-400 transition-colors hover:text-white">교육정보</a>
+          <a href="notice.html" class="text-sm text-mist-400 transition-colors hover:text-white">공지사항</a>
+        </nav>
+      </div>
+
+      <div class="mt-12 border-t border-white/5 pt-8">
+        <p class="text-xs text-mist-500">© <span id="year">2026</span> Catholic Precision Medicine Research Center. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

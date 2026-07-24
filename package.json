@@ -1,0 +1,26 @@
+{
+  "name": "pmrc-web",
+  "version": "1.0.0",
+  "description": "Catholic Precision Medicine Research Center 공식 홈페이지 (정적 웹사이트).",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i css/tailwind.src.css -o css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i css/tailwind.src.css -o css/tailwind.css --watch",
+    "serve": "python3 -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parkji7/pmrc-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parkji7/pmrc-web/issues"
+  },
+  "homepage": "https://github.com/parkji7/pmrc-web#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

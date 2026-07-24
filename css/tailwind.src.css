@@ -1,0 +1,98 @@
+/* Tailwind 소스 파일. 이 파일을 수정한 뒤 아래 명령으로 css/tailwind.css를 다시 빌드합니다.
+ *   npx @tailwindcss/cli -i css/tailwind.src.css -o css/tailwind.css --minify
+ * 빌드 결과(css/tailwind.css)는 저장소에 커밋되므로 배포 시 별도 빌드 단계가 없습니다. */
+
+@import "tailwindcss";
+
+@source "../*.html";
+@source "../js/**/*.js";
+
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+  /* 딥 네이비 배경 계열 */
+  --color-navy-950: #030814;
+  --color-navy-900: #061127;
+  --color-navy-850: #081736;
+  --color-navy-800: #0b1f45;
+  --color-navy-700: #12305f;
+
+  /* 시그니처 블루 */
+  --color-brand-600: #1663d6;
+  --color-brand-500: #2b7fff;
+  --color-brand-400: #58a0ff;
+  --color-brand-300: #8fc0ff;
+
+  /* 본문 텍스트 */
+  --color-mist-100: #eaf1fb;
+  --color-mist-300: #b6c6de;
+  --color-mist-400: #8ea3c2;
+  --color-mist-500: #6b809f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* 고정 헤더 높이만큼 앵커 위치 보정 */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-navy-950);
+    color: var(--color-mist-300);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-500);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-400);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* 스크롤 진입 애니메이션. JS가 .is-visible을 붙인다. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* 카드 상단/하단의 얇은 그라데이션 선 */
+  .rule-gradient {
+    background-image: linear-gradient(
+      90deg,
+      var(--color-brand-500) 0%,
+      var(--color-brand-400) 45%,
+      transparent 100%
+    );
+  }
+}
+
+/* 모션 최소화를 선호하는 사용자는 애니메이션 없이 바로 표시 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

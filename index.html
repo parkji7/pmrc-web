@@ -4,364 +4,424 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>가톨릭정밀의학연구센터 | Catholic Precision Medicine Research Center</title>
-  <meta name="description" content="가톨릭정밀의학연구센터(PMRC)는 중개의학과 인공지능·유전체 분석 기술을 통해 환자 맞춤형 정밀의학 연구를 선도합니다." />
+  <meta name="description" content="가톨릭정밀의학연구센터(PMRC)는 기초연구와 임상을 연결하는 중개의학을 활성화하고, 인공지능 및 최첨단 유전체 분석 기술을 통해 환자 맞춤형 정밀의학 연구를 선도합니다." />
   <meta name="author" content="Catholic Precision Medicine Research Center" />
+  <meta name="theme-color" content="#030814" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="가톨릭정밀의학연구센터 (PMRC)" />
-  <meta property="og:description" content="AI와 유전체 분석 기술로 환자 맞춤형 정밀의학을 선도합니다." />
+  <meta property="og:description" content="Precision Medicine, Better Future — AI와 유전체 분석 기술로 환자 맞춤형 정밀의학을 선도합니다." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="assets/img/hero-bg.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="css/tailwind.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AC%3C/text%3E%3C/svg%3E" />
 </head>
-<body>
 
-  <!-- ============ HEADER / NAV ============ -->
-  <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand" aria-label="가톨릭정밀의학연구센터 홈">
-        <img src="assets/img/main_logo.png" alt="가톨릭정밀의학연구센터 Catholic Precision Medicine Research Center" class="brand-logo" />
+<body class="font-sans antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white">본문 바로가기</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 border-b border-white/5 transition-colors duration-300">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 sm:h-20 lg:px-8">
+      <a href="index.html" class="flex shrink-0 items-center" aria-label="가톨릭정밀의학연구센터 홈">
+        <img src="assets/img/main_logo.png" alt="가톨릭정밀의학연구센터 Catholic Precision Medicine Research Center" class="h-8 w-auto sm:h-10" />
       </a>
 
-      <nav class="main-nav" id="mainNav" aria-label="주요 메뉴">
-        <a href="#about">센터 소개</a>
-        <a href="#business">주요 사업</a>
-        <a href="#activities">주요 활동</a>
-        <a href="#workshops">교육·워크샵</a>
-        <a href="#services">분석 서비스</a>
-        <a href="#contact">오시는 길</a>
+      <nav class="hidden items-center gap-6 lg:flex" aria-label="주요 메뉴">
+        <a href="index.html" aria-current="page" class="text-sm font-semibold text-white">Home</a>
+        <a href="about.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">연구소 소개</a>
+        <a href="research.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">연구성과</a>
+        <a href="services.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">분석서비스</a>
+        <a href="equipment.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">장비소개</a>
+        <a href="education.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">교육정보</a>
+        <a href="notice.html" class="text-sm font-medium text-mist-300 transition-colors hover:text-white">공지사항</a>
+        <a href="https://en.pmrc.re.kr" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/15 px-4 py-1.5 text-sm font-medium text-mist-300 transition-colors hover:border-white/35 hover:text-white">ENG</a>
       </nav>
 
-      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
-        <span></span><span></span><span></span>
+      <button id="navToggle" type="button" class="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-mist-100 transition-colors hover:bg-white/10 lg:hidden" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+          <path data-icon="open" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+          <path data-icon="close" class="hidden" stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+        </svg>
       </button>
     </div>
+
+    <nav id="mobileNav" class="hidden border-t border-white/5 bg-navy-950/95 backdrop-blur-lg lg:hidden" aria-label="모바일 메뉴">
+      <div class="space-y-1 px-5 py-4">
+        <a href="index.html" aria-current="page" class="block rounded-lg bg-white/5 px-3 py-3 text-base font-semibold text-white">Home</a>
+        <a href="about.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">연구소 소개</a>
+        <a href="research.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">연구성과</a>
+        <a href="services.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">분석서비스</a>
+        <a href="equipment.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">장비소개</a>
+        <a href="education.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">교육정보</a>
+        <a href="notice.html" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">공지사항</a>
+        <a href="https://en.pmrc.re.kr" target="_blank" rel="noopener noreferrer" class="block rounded-lg px-3 py-3 text-base font-medium text-mist-300 hover:bg-white/5 hover:text-white">ENG</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <p class="hero-eyebrow" data-reveal>Precision Medicine · AI · Genomics</p>
-      <h1 class="hero-title" data-reveal>
-        데이터로 완성하는<br /><span class="accent">환자 맞춤형 정밀의학</span>
-      </h1>
-      <p class="hero-lead" data-reveal>
-        가톨릭정밀의학연구센터는 기초연구와 임상을 연결하는 중개의학을 활성화하고,<br class="br-lg" />
-        인공지능 및 최첨단 유전체 분석 기술로 정밀의학 연구를 선도합니다.
-      </p>
-      <div class="hero-actions" data-reveal>
-        <a href="#about" class="btn btn-primary">센터 소개</a>
-        <a href="#services" class="btn btn-ghost">분석 서비스 보기</a>
-      </div>
-    </div>
-    <a href="#about" class="scroll-cue" aria-label="아래로 스크롤">
-      <span></span>
-    </a>
-  </section>
+  <main id="main">
 
-  <!-- ============ ABOUT ============ -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="kicker">About PMRC</span>
-        <h2>센터 소개</h2>
-      </div>
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="relative isolate flex min-h-[100svh] items-center overflow-hidden">
+      <img src="assets/img/hero-bg.jpg" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center] sm:object-center" />
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-950/30" aria-hidden="true"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/70" aria-hidden="true"></div>
 
-      <div class="about-grid">
-        <div class="about-intro" data-reveal>
-          <p class="lead">
-            가톨릭정밀의학연구센터는 기초연구와 임상을 연결하는 <strong>중개의학(Translational Medicine)</strong>을 활성화하고,
-            인공지능 및 최첨단 유전체 분석 기술을 통해 <strong>환자 맞춤형 정밀의학 연구</strong>를 선도하고 있습니다.
+      <div class="mx-auto w-full max-w-7xl px-5 pt-28 pb-24 sm:pt-32 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="reveal text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">Precision Medicine · AI · Genomics</p>
+
+          <h1 class="reveal mt-5 text-4xl font-black leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">가톨릭정밀의학연구센터</h1>
+
+          <p class="reveal mt-4 text-xl font-semibold text-brand-400 sm:text-2xl lg:text-3xl">Precision Medicine, Better Future</p>
+
+          <p class="reveal mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-mist-400 sm:text-base">
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-medium text-mist-300">가톨릭대학교 의과대학 의생명연구원</span>
+            <span class="hidden sm:inline" aria-hidden="true">·</span>
+            <span>Catholic Precision Medicine Research Center</span>
           </p>
-          <p>
-            환자 개개인에게 최적화된 의료 서비스를 제공하는 것을 목표로 하며, 인공지능 기술을 활용하여
-            정밀의학의 새로운 패러다임을 선도하고 데이터 기반의 맞춤형 치료를 실현합니다.
+
+          <p class="reveal mt-6 text-base leading-relaxed text-mist-300 sm:text-lg">
+            기초연구와 임상을 연결하는 중개의학을 활성화하고, 인공지능 및 최첨단 유전체 분석 기술을 통해
+            <span class="font-semibold text-white">환자 맞춤형 정밀의학 연구</span>를 선도합니다.
+          </p>
+
+          <div class="reveal mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <a href="about.html" class="group inline-flex items-center justify-center gap-2 rounded-lg bg-brand-500 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-brand-600">
+              연구소 소개
+              <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a href="research.html" class="group inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/5">
+              연구성과 보기
+              <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-mist-500 transition-colors hover:text-brand-400 lg:flex" aria-label="아래로 스크롤">
+        <span class="text-[10px] font-semibold tracking-[0.2em] uppercase">Scroll</span>
+        <svg class="h-5 w-5 animate-bounce" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6" /></svg>
+      </a>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="relative bg-navy-950 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">About PMRC</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">가톨릭정밀의학연구센터에<br class="sm:hidden" /> 오신 것을 환영합니다</h2>
+          <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
+        </div>
+
+        <div class="mt-14 grid gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-16">
+          <div class="reveal space-y-6">
+            <p class="text-lg leading-relaxed text-mist-100 sm:text-xl">
+              가톨릭정밀의학연구센터는 기초연구와 임상을 연결하는
+              <strong class="font-semibold text-white">중개의학</strong>을 활성화하고,
+              인공지능 및 최첨단 유전체 분석 기술을 통해
+              <strong class="font-semibold text-white">환자 맞춤형 정밀의학 연구</strong>를 선도하고 있습니다.
+            </p>
+            <p class="leading-relaxed">
+              환자 개개인에게 최적화된 의료 서비스를 제공하는 것을 목표로 합니다. 인공지능 기술을 활용하여
+              정밀의학의 새로운 패러다임을 선도하고, 데이터 기반의 맞춤형 치료를 실현합니다.
+            </p>
+
+            <ul class="mt-10 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+              <li class="flex items-start gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span class="text-mist-300">정밀의학 분석기술 개발 및 고도화</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span class="text-mist-300">의료진과 연구자를 위한 정밀의학 교육</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span class="text-mist-300">유전체 데이터 생산 및 AI 기반 분석 지원</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span class="text-mist-300">산학협력을 통한 혁신 모델 창출</span>
+              </li>
+            </ul>
+
+            <a href="about.html" class="group mt-4 inline-flex items-center gap-2 font-semibold text-brand-400 transition-colors hover:text-brand-300">
+              센터장 인사말 · 연혁 · 조직구성 보기
+              <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+
+          <aside class="reveal relative overflow-hidden rounded-2xl border border-brand-500/20 bg-gradient-to-br from-navy-850 to-navy-900 p-8 sm:p-10">
+            <div class="rule-gradient absolute inset-x-0 top-0 h-px" aria-hidden="true"></div>
+            <h3 class="text-sm font-semibold tracking-[0.18em] text-brand-400 uppercase">Our Vision</h3>
+            <p class="mt-5 text-xl leading-relaxed font-semibold text-white sm:text-2xl">
+              인공지능으로 정밀의학의 새로운 패러다임을 선도하고, 데이터 기반의 맞춤형 치료를 실현합니다.
+            </p>
+            <svg class="pointer-events-none absolute -right-8 -bottom-8 h-40 w-40 text-brand-500/10" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2c0 5 10 5 10 10S7 17 7 22M17 2c0 5-10 5-10 10s10 5 10 10" />
+              <path d="M8.5 6h7M8 9.5h8M8 14.5h8M8.5 18h7" />
+            </svg>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 주요 활동 ==================== -->
+    <section id="activities" class="relative border-y border-white/5 bg-navy-900 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">Key Activities</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">주요 활동</h2>
+          <p class="mt-5 leading-relaxed text-mist-400">연구 현황 세부 안내</p>
+          <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
+          <article class="reveal group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-850/60 p-8 transition-colors duration-300 hover:border-brand-500/40 hover:bg-navy-850">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 transition-colors duration-300 group-hover:border-brand-400/60">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" d="M7 2c0 5 10 5 10 10S7 17 7 22M17 2c0 5-10 5-10 10s10 5 10 10" />
+                <path stroke-linecap="round" d="M8.5 6h7M8 9.5h8M8 14.5h8M8.5 18h7" />
+              </svg>
+            </span>
+            <p class="mt-6 text-sm font-bold tracking-widest text-brand-500">01</p>
+            <h3 class="mt-2 text-xl font-bold text-white">첨단 유전체 연구</h3>
+            <p class="mt-4 leading-relaxed text-mist-400">국책과제 수행과 SCI급 국제 학술지 논문 발표를 통해 정밀의학 분야의 학문적 발전을 이끌고 있습니다.</p>
+            <div class="rule-gradient mt-8 h-0.5 w-16 origin-left transition-transform duration-300 group-hover:scale-x-[2.5]" aria-hidden="true"></div>
+          </article>
+
+          <article class="reveal group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-850/60 p-8 transition-colors duration-300 hover:border-brand-500/40 hover:bg-navy-850">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 transition-colors duration-300 group-hover:border-brand-400/60">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="5" r="2" /><circle cx="5" cy="11" r="2" /><circle cx="19" cy="11" r="2" />
+                <circle cx="8.5" cy="19" r="2" /><circle cx="15.5" cy="19" r="2" />
+                <path stroke-linecap="round" d="M10.4 6.3L6.6 9.6M13.6 6.3l3.8 3.3M6 12.9l2 4.3M18 12.9l-2 4.3M10.5 19h3" />
+              </svg>
+            </span>
+            <p class="mt-6 text-sm font-bold tracking-widest text-brand-500">02</p>
+            <h3 class="mt-2 text-xl font-bold text-white">AI 기반 정밀의학</h3>
+            <p class="mt-4 leading-relaxed text-mist-400">인공지능과 머신러닝을 활용하여 방대한 유전체 데이터를 분석하고, 질병을 미리 예측하는 모델을 개발합니다.</p>
+            <div class="rule-gradient mt-8 h-0.5 w-16 origin-left transition-transform duration-300 group-hover:scale-x-[2.5]" aria-hidden="true"></div>
+          </article>
+
+          <article class="reveal group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-850/60 p-8 transition-colors duration-300 hover:border-brand-500/40 hover:bg-navy-850">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 transition-colors duration-300 group-hover:border-brand-400/60">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 016.5 3H19v15H6.5A2.5 2.5 0 004 20.5z" />
+                <path stroke-linecap="round" d="M19 18v3H6.5A2.5 2.5 0 014 18.5" />
+              </svg>
+            </span>
+            <p class="mt-6 text-sm font-bold tracking-widest text-brand-500">03</p>
+            <h3 class="mt-2 text-xl font-bold text-white">전문 교육 프로그램</h3>
+            <p class="mt-4 leading-relaxed text-mist-400">의료진과 연구자를 위해 유전체 빅데이터 분석, 차세대 염기서열 분석(NGS) 등 실무 중심의 교육과 워크샵을 제공합니다.</p>
+            <div class="rule-gradient mt-8 h-0.5 w-16 origin-left transition-transform duration-300 group-hover:scale-x-[2.5]" aria-hidden="true"></div>
+          </article>
+
+          <article class="reveal group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-850/60 p-8 transition-colors duration-300 hover:border-brand-500/40 hover:bg-navy-850">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 transition-colors duration-300 group-hover:border-brand-400/60">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path stroke-linecap="round" d="M3 12h18M12 3c2.5 2.7 3.8 6 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-6-3.8-9S9.5 5.7 12 3z" />
+              </svg>
+            </span>
+            <p class="mt-6 text-sm font-bold tracking-widest text-brand-500">04</p>
+            <h3 class="mt-2 text-xl font-bold text-white">글로벌 네트워크</h3>
+            <p class="mt-4 leading-relaxed text-mist-400">국내외 학술대회 공동 주최와 국내외 심포지엄 개최를 통해 세계적인 연구자들과 협력 네트워크를 구축하고 있습니다.</p>
+            <div class="rule-gradient mt-8 h-0.5 w-16 origin-left transition-transform duration-300 group-hover:scale-x-[2.5]" aria-hidden="true"></div>
+          </article>
+
+          <article class="reveal group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-850/60 p-8 transition-colors duration-300 hover:border-brand-500/40 hover:bg-navy-850 md:col-span-2 lg:col-span-1">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 transition-colors duration-300 group-hover:border-brand-400/60">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 18h6M10 21h4" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3a6 6 0 013.6 10.8c-.6.5-.9 1.1-1 1.7l-.1.5H9.5l-.1-.5c-.1-.6-.4-1.2-1-1.7A6 6 0 0112 3z" />
+              </svg>
+            </span>
+            <p class="mt-6 text-sm font-bold tracking-widest text-brand-500">05</p>
+            <h3 class="mt-2 text-xl font-bold text-white">기술 개발 및 실용화</h3>
+            <p class="mt-4 leading-relaxed text-mist-400">감염 현장신속검사 기술, AI 진단 알고리즘 등을 개발하고 특허 출원을 통해 연구 성과를 실제 의료 현장에서 활용할 수 있도록 사업화를 추진합니다.</p>
+            <div class="rule-gradient mt-8 h-0.5 w-16 origin-left transition-transform duration-300 group-hover:scale-x-[2.5]" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 유전체 분석 서비스 ==================== -->
+    <section id="services" class="relative bg-navy-950 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">Research Support</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">유전체 분석 서비스</h2>
+          <p class="mt-5 leading-relaxed text-mist-400">연구 지원 안내</p>
+          <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
+        </div>
+
+        <dl class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
+            <dt class="text-lg font-bold text-white">암 유전자 패널 분석</dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">암 환자 맞춤 치료를 위한 유전자 변이 검사</dd>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
+            <dt class="text-lg font-bold text-white">전장 엑솜 분석 (WES)</dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">질병 관련 유전자 전체를 분석하여 희귀질환 원인 규명</dd>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
+            <dt class="text-lg font-bold text-white">전장 유전체 분석 (WGS)</dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">개인의 모든 유전 정보를 해독하여 포괄적 건강 정보 제공</dd>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
+            <dt class="text-lg font-bold text-white">롱리드 시퀀싱</dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">기존 방법으로 찾기 어려운 복잡한 유전 변이까지 정밀 분석</dd>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
+            <dt class="text-lg font-bold text-white">단일세포 분석</dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">세포 하나하나의 유전자 발현을 분석하여 질병 메커니즘 규명</dd>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
+            <dt class="text-lg font-bold text-white">AI 데이터 분석</dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">인공지능으로 복잡한 유전체 데이터를 해석하고 임상적 의미 도출</dd>
+          </div>
+        </dl>
+
+        <div class="reveal mt-10 flex flex-wrap gap-4">
+          <a href="services.html" class="group inline-flex items-center gap-2 font-semibold text-brand-400 transition-colors hover:text-brand-300">
+            분석서비스 신청방법 보기
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a href="equipment.html" class="group inline-flex items-center gap-2 font-semibold text-brand-400 transition-colors hover:text-brand-300">
+            보유 장비 보기
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 찾아오시는 길 ==================== -->
+    <section id="contact" class="relative overflow-hidden border-t border-white/5 bg-navy-900 py-24 sm:py-32">
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(43,127,255,0.14),transparent_70%)]" aria-hidden="true"></div>
+
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">Contact</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">찾아오시는 길</h2>
+          <p class="mt-5 leading-relaxed text-mist-400">가톨릭정밀의학연구센터는 서울의 중심부에 위치하여 쉽게 찾아오실 수 있습니다.</p>
+          <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-2 lg:gap-8">
+
+          <!-- 교통편 -->
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-850/60 p-8 sm:p-10">
+            <h3 class="flex items-center gap-3 text-lg font-bold text-white">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500/10 text-brand-400">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="5" y="3" width="14" height="13" rx="3" /><path stroke-linecap="round" d="M5 10h14M8.5 19.5L7 21m8.5-1.5L17 21" /><circle cx="8.5" cy="13" r="1" /><circle cx="15.5" cy="13" r="1" />
+                </svg>
+              </span>
+              지하철 이용 시
+            </h3>
+            <ul class="mt-5 space-y-3">
+              <li class="flex items-start gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden="true"></span><span>3호선 또는 7호선 <strong class="font-semibold text-mist-100">고속터미널역</strong> 4번 출구에서 도보로 약 200m</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden="true"></span><span>2호선 또는 3호선 <strong class="font-semibold text-mist-100">교대역</strong> 7번 출구에서 도보로 약 1km</span></li>
+            </ul>
+
+            <h3 class="mt-10 flex items-center gap-3 text-lg font-bold text-white">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500/10 text-brand-400">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="12" rx="2" /><path stroke-linecap="round" d="M3 10h18M7 20l1-2m9 2l-1-2" /><circle cx="7" cy="13.5" r="1" /><circle cx="17" cy="13.5" r="1" />
+                </svg>
+              </span>
+              셔틀버스 이용 시
+            </h3>
+            <ul class="mt-5 space-y-3">
+              <li class="flex items-start gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden="true"></span><span><strong class="font-semibold text-mist-100">고속터미널역</strong> (3, 7, 9호선) 3번 출구 앞 버스 정류장</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden="true"></span><span><strong class="font-semibold text-mist-100">서초역</strong> (2호선) 7번 출구 앞 버스 정류장</span></li>
+            </ul>
+          </div>
+
+          <!-- 연락처 -->
+          <div class="reveal flex flex-col gap-6">
+            <div class="rounded-2xl border border-white/10 bg-navy-850/60 p-8 sm:p-10">
+              <dl class="space-y-7">
+                <div class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand-500/10 text-brand-400">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z" /><circle cx="12" cy="10" r="2.5" /></svg>
+                  </span>
+                  <div>
+                    <dt class="text-sm font-semibold text-mist-500">주소</dt>
+                    <dd class="mt-1.5 leading-relaxed text-mist-100">서울특별시 서초구 반포대로 222<br />가톨릭대학교 의과대학 의생명연구원 3017-2</dd>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand-500/10 text-brand-400">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5c0 8.3 6.7 15 15 15l1.5-3.5-4-2-1.8 1.8a12.4 12.4 0 01-6-6L10.5 8.5l-2-4L5 6z" /></svg>
+                  </span>
+                  <div>
+                    <dt class="text-sm font-semibold text-mist-500">전화번호</dt>
+                    <dd class="mt-1.5"><a href="tel:0231479008" class="text-mist-100 transition-colors hover:text-brand-400">02-3147-9008</a></dd>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand-500/10 text-brand-400">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5l8.5 6 8.5-6" /></svg>
+                  </span>
+                  <div>
+                    <dt class="text-sm font-semibold text-mist-500">이메일</dt>
+                    <dd class="mt-1.5"><a href="mailto:cmcpmrc@gmail.com" class="text-mist-100 underline decoration-brand-500/50 underline-offset-4 transition-colors hover:text-brand-400">cmcpmrc@gmail.com</a></dd>
+                  </div>
+                </div>
+              </dl>
+            </div>
+
+            <div class="rounded-2xl border border-brand-500/25 bg-gradient-to-br from-brand-600/20 to-navy-850 p-8 sm:p-10">
+              <h3 class="text-xl font-bold text-white">연구 협력 및 서비스 문의</h3>
+              <p class="mt-3 leading-relaxed text-mist-300">공동 연구, 분석 서비스 이용, 교육 프로그램 참여를 원하시면 이메일로 연락 주세요.</p>
+              <a href="mailto:cmcpmrc@gmail.com" class="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-500 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-brand-600 sm:w-auto">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5l8.5 6 8.5-6" /></svg>
+                이메일 보내기
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-white/5 bg-navy-950 py-14">
+    <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+        <div class="max-w-md">
+          <img src="assets/img/main_logo.png" alt="가톨릭정밀의학연구센터 Catholic Precision Medicine Research Center" class="h-9 w-auto" />
+          <p class="mt-5 text-sm leading-relaxed text-mist-500">
+            이메일 : <a href="mailto:cmcpmrc@gmail.com" class="transition-colors hover:text-brand-400">cmcpmrc@gmail.com</a>
+            &nbsp;|&nbsp; 전화번호 : <a href="tel:0231479008" class="transition-colors hover:text-brand-400">02-3147-9008</a><br />
+            주소 : 서울시 서초구 반포대로 222 가톨릭대학교 의과대학 의생명연구원 3017-2
           </p>
         </div>
 
-        <div class="vision-card" data-reveal>
-          <h3>Our Vision</h3>
-          <p>인공지능으로 정밀의학의 새로운 패러다임을 선도하고, 데이터 기반의 맞춤형 치료를 실현합니다.</p>
-        </div>
+        <nav class="flex flex-wrap gap-x-8 gap-y-3" aria-label="푸터 메뉴">
+          <a href="about.html" class="text-sm text-mist-400 transition-colors hover:text-white">연구소 소개</a>
+          <a href="research.html" class="text-sm text-mist-400 transition-colors hover:text-white">연구성과</a>
+          <a href="services.html" class="text-sm text-mist-400 transition-colors hover:text-white">분석서비스</a>
+          <a href="equipment.html" class="text-sm text-mist-400 transition-colors hover:text-white">장비소개</a>
+          <a href="education.html" class="text-sm text-mist-400 transition-colors hover:text-white">교육정보</a>
+          <a href="notice.html" class="text-sm text-mist-400 transition-colors hover:text-white">공지사항</a>
+        </nav>
       </div>
 
-      <ul class="stats" data-reveal>
-        <li>
-          <span class="stat-num" data-count="5">0</span><span class="stat-suffix">대</span>
-          <span class="stat-label">핵심 연구 활동</span>
-        </li>
-        <li>
-          <span class="stat-num" data-count="6">0</span><span class="stat-suffix">종</span>
-          <span class="stat-label">유전체 분석 서비스</span>
-        </li>
-        <li>
-          <span class="stat-num" data-count="4">0</span><span class="stat-suffix">개</span>
-          <span class="stat-label">주요 사업 영역</span>
-        </li>
-        <li>
-          <span class="stat-num" data-count="100">0</span><span class="stat-suffix">%</span>
-          <span class="stat-label">환자 중심 연구</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ BUSINESS ============ -->
-  <section class="section section-alt" id="business">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="kicker">Core Business</span>
-        <h2>주요 사업</h2>
-        <p class="section-sub">정밀의학 생태계를 구축하는 네 가지 핵심 사업을 수행합니다.</p>
+      <div class="mt-12 border-t border-white/5 pt-8">
+        <p class="text-xs text-mist-500">© <span id="year">2026</span> Catholic Precision Medicine Research Center. All rights reserved.</p>
       </div>
-
-      <div class="cards cards-4">
-        <article class="card" data-reveal>
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg>
-          </span>
-          <h3>분석기술 개발 및 고도화</h3>
-          <p>정밀의학 분석기술을 자체 개발하고 지속적으로 고도화하여 연구·진단 역량을 강화합니다.</p>
-        </article>
-
-        <article class="card" data-reveal>
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </span>
-          <h3>정밀의학 교육</h3>
-          <p>의료진과 연구자를 위한 전문 교육 프로그램을 운영하여 정밀의학 전문 인력을 양성합니다.</p>
-        </article>
-
-        <article class="card" data-reveal>
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>
-          </span>
-          <h3>유전체 데이터 · AI 분석</h3>
-          <p>대규모 유전체 데이터를 생산하고 AI 기반 분석을 지원하여 연구 성과 창출을 뒷받침합니다.</p>
-        </article>
-
-        <article class="card" data-reveal>
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="17" r="3"/><path d="M10 7h4a3 3 0 0 1 3 3v4M7 10v4a3 3 0 0 0 3 3h4"/></svg>
-          </span>
-          <h3>산학협력 혁신 모델</h3>
-          <p>산업계·학계와의 협력을 통해 정밀의학 분야의 혁신 모델을 창출하고 실용화를 추진합니다.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ACTIVITIES ============ -->
-  <section class="section" id="activities">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="kicker">Key Activities</span>
-        <h2>주요 활동</h2>
-        <p class="section-sub">연구부터 실용화까지, 다섯 갈래의 활동으로 정밀의학을 발전시킵니다.</p>
-      </div>
-
-      <ol class="activities">
-        <li class="activity" data-reveal>
-          <span class="activity-no">01</span>
-          <div class="activity-body">
-            <h3>첨단 유전체 연구</h3>
-            <p>국책과제를 수행하고 SCI급 국제 학술지에 논문을 발표하며 유전체 연구를 선도합니다.</p>
-          </div>
-        </li>
-        <li class="activity" data-reveal>
-          <span class="activity-no">02</span>
-          <div class="activity-body">
-            <h3>AI 기반 정밀의학</h3>
-            <p>머신러닝으로 유전체 데이터를 분석하고 질병 예측 모델을 개발합니다.</p>
-          </div>
-        </li>
-        <li class="activity" data-reveal>
-          <span class="activity-no">03</span>
-          <div class="activity-body">
-            <h3>전문 교육 프로그램</h3>
-            <p>유전체 빅데이터 분석, NGS 등 실무 중심의 교육과 워크샵을 운영합니다.</p>
-          </div>
-        </li>
-        <li class="activity" data-reveal>
-          <span class="activity-no">04</span>
-          <div class="activity-body">
-            <h3>글로벌 네트워크</h3>
-            <p>국내외 학술대회를 공동 주최하고 심포지엄을 개최하여 협력 네트워크를 확장합니다.</p>
-          </div>
-        </li>
-        <li class="activity" data-reveal>
-          <span class="activity-no">05</span>
-          <div class="activity-body">
-            <h3>기술 개발 및 실용화</h3>
-            <p>감염 현장신속검사, AI 진단 알고리즘을 개발하고 특허를 출원하여 실용화를 추진합니다.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ============ WORKSHOPS ============ -->
-  <section class="section section-alt" id="workshops">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="kicker">Education &amp; Workshops</span>
-        <h2>교육·워크샵</h2>
-        <p class="section-sub">유전체 빅데이터 분석, NGS 등 실무 중심의 교육 프로그램과 워크샵을 운영합니다.</p>
-      </div>
-
-      <div class="cards cards-3">
-        <article class="workshop-card" data-reveal>
-          <div class="workshop-thumb">
-            <img src="assets/img/cancer_genomics..b.png" alt="Cancer Genomics 워크샵" loading="lazy" />
-          </div>
-          <div class="workshop-body">
-            <span class="workshop-badge">Workshop</span>
-            <h3>Cancer Genomics</h3>
-            <p>암 유전체 데이터의 구조와 분석 방법을 다루는 실무 중심 워크샵입니다.</p>
-          </div>
-        </article>
-
-        <article class="workshop-card" data-reveal>
-          <div class="workshop-thumb">
-            <img src="assets/img/depmap.png" alt="DepMap (Cancer Dependency Map) 워크샵" loading="lazy" />
-          </div>
-          <div class="workshop-body">
-            <span class="workshop-badge">Workshop</span>
-            <h3>DepMap</h3>
-            <p>암 의존성 지도(Cancer Dependency Map)를 활용한 표적 발굴 실습 워크샵입니다.</p>
-          </div>
-        </article>
-
-        <article class="workshop-card" data-reveal>
-          <div class="workshop-thumb">
-            <img src="assets/img/geo.png" alt="Genotype-Tissue Expression (GTEx) 워크샵" loading="lazy" />
-          </div>
-          <div class="workshop-body">
-            <span class="workshop-badge">Workshop</span>
-            <h3>Genotype-Tissue Expression</h3>
-            <p>조직별 유전자 발현(GTEx) 데이터의 해석과 활용을 다루는 워크샵입니다.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SERVICES ============ -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="kicker">Genomic Analysis</span>
-        <h2>유전체 분석 서비스</h2>
-        <p class="section-sub">환자 맞춤형 정밀의학을 위한 여섯 가지 유전체 분석 서비스를 제공합니다.</p>
-      </div>
-
-      <div class="cards cards-3">
-        <article class="service-card" data-reveal>
-          <span class="service-tag">Cancer Panel</span>
-          <h3>암 유전자 패널 분석</h3>
-          <p>암 환자 맞춤 치료를 위한 유전자 변이 검사로 표적 치료의 근거를 제공합니다.</p>
-        </article>
-
-        <article class="service-card" data-reveal>
-          <span class="service-tag">WES</span>
-          <h3>전장 엑솜 분석 (WES)</h3>
-          <p>단백질을 암호화하는 엑손 영역을 집중 분석하여 희귀질환의 원인을 규명합니다.</p>
-        </article>
-
-        <article class="service-card" data-reveal>
-          <span class="service-tag">WGS</span>
-          <h3>전장 유전체 분석 (WGS)</h3>
-          <p>개인의 전체 유전체 서열을 분석하여 폭넓은 변이 정보를 종합적으로 확인합니다.</p>
-        </article>
-
-        <!-- 아래 3가지는 잘린 내용을 정밀의학 분야 일반 서비스로 임시 구성했습니다. 실제 내용으로 교체하세요. -->
-        <article class="service-card is-placeholder" data-reveal>
-          <span class="service-tag">RNA-seq</span>
-          <h3>전사체 분석 (RNA-seq)</h3>
-          <p>유전자 발현 프로파일을 분석하여 질병 기전과 바이오마커를 탐색합니다.</p>
-        </article>
-
-        <article class="service-card is-placeholder" data-reveal>
-          <span class="service-tag">Liquid Biopsy</span>
-          <h3>액체생검 (ctDNA)</h3>
-          <p>혈액 내 순환 종양 DNA를 분석하여 비침습적으로 질병을 모니터링합니다.</p>
-        </article>
-
-        <article class="service-card is-placeholder" data-reveal>
-          <span class="service-tag">Single-cell</span>
-          <h3>단일세포 분석</h3>
-          <p>단일세포 수준의 유전체·전사체 분석으로 세포 이질성을 정밀하게 해석합니다.</p>
-        </article>
-      </div>
-
-      <p class="services-note" data-reveal>
-        분석 서비스 관련 문의는 <a href="#contact">오시는 길 · 연락처</a>를 통해 상담해 주시기 바랍니다.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section section-alt" id="contact">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="kicker">Contact</span>
-        <h2>오시는 길 · 연락처</h2>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-info" data-reveal>
-          <dl>
-            <div class="contact-row">
-              <dt>기관명</dt>
-              <dd>가톨릭정밀의학연구센터<br /><span class="en">Catholic Precision Medicine Research Center</span></dd>
-            </div>
-            <div class="contact-row">
-              <dt>주소</dt>
-              <dd>[주소를 입력하세요]</dd>
-            </div>
-            <div class="contact-row">
-              <dt>전화</dt>
-              <dd>[전화번호를 입력하세요]</dd>
-            </div>
-            <div class="contact-row">
-              <dt>이메일</dt>
-              <dd>[이메일을 입력하세요]</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="contact-cta" data-reveal>
-          <h3>연구 협력 및 서비스 문의</h3>
-          <p>정밀의학 연구 협력, 교육 프로그램, 유전체 분석 서비스에 대해 언제든 문의해 주세요.</p>
-          <a href="mailto:" class="btn btn-primary">이메일 문의하기</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <strong>가톨릭정밀의학연구센터</strong>
-        <span>Catholic Precision Medicine Research Center</span>
-      </div>
-      <nav class="footer-nav" aria-label="푸터 메뉴">
-        <a href="#about">센터 소개</a>
-        <a href="#business">주요 사업</a>
-        <a href="#activities">주요 활동</a>
-        <a href="#workshops">교육·워크샵</a>
-        <a href="#services">분석 서비스</a>
-        <a href="#contact">오시는 길</a>
-      </nav>
-      <p class="copyright">© <span id="year"></span> Catholic Precision Medicine Research Center. All rights reserved.</p>
     </div>
   </footer>
 

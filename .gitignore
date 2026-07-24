@@ -2,6 +2,9 @@
 .DS_Store
 Thumbs.db
 
+# WSL: 윈도우에서 복사한 파일에 붙는 메타데이터
+*:Zone.Identifier
+
 # 에디터
 .vscode/
 .idea/
