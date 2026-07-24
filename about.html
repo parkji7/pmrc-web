@@ -81,20 +81,22 @@
     <!-- 센터장 인사말 -->
     <section id="greeting" class="bg-navy-950 py-20 sm:py-28">
       <div class="mx-auto max-w-7xl px-5 lg:px-8">
-        <div class="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-16">
-          <div class="reveal">
-            <h2 class="text-2xl font-bold text-white sm:text-3xl">센터장 인사말</h2>
+        <h2 class="reveal text-2xl font-bold text-white sm:text-3xl">센터장 인사말</h2>
 
-            <!-- 사진은 원본 해상도(1031x1600) 그대로 사용. width/height를 명시해 로딩 중 레이아웃 밀림 방지 -->
-            <figure class="mt-8">
+        <!-- 제목을 그리드 밖으로 빼서, 사진과 본문이 같은 높이에서 시작하도록 정렬한다.
+             왼쪽 열은 auto — 사진 너비(288px)에 맞춰진다. -->
+        <div class="mt-10 grid gap-10 lg:mt-12 lg:grid-cols-[auto_1fr] lg:gap-16">
+          <div class="reveal">
+            <!-- 사진 파일은 원본 해상도(1031x1600) 유지. width/height 명시로 로딩 중 밀림 방지 -->
+            <figure>
               <img src="assets/img/director.jpg"
                    alt="가톨릭정밀의학연구센터장 정연준"
                    width="1031" height="1600"
-                   class="w-full max-w-sm rounded-2xl border border-white/10 shadow-2xl shadow-black/50"
+                   class="w-72 max-w-full rounded-2xl border border-white/10 shadow-2xl shadow-black/50"
                    loading="lazy" decoding="async" />
             </figure>
 
-            <p class="mt-8 text-brand-400">가톨릭 정밀의학연구센터장</p>
+            <p class="mt-6 text-brand-400">가톨릭 정밀의학연구센터장</p>
             <p class="mt-1 text-2xl font-bold text-white">정연준</p>
           </div>
 
@@ -161,7 +163,8 @@
         <figure class="reveal mt-12 overflow-hidden rounded-2xl border border-white/10">
           <img src="assets/img/about-opening-seminar.jpg"
                alt="가톨릭정밀의학연구센터 개소 기념 세미나 및 축복식 현장 사진 4장 — 참석자 단체 사진, 현판 제막식, 세미나 강연 장면"
-               class="w-full" loading="lazy" />
+               width="2400" height="1131"
+               class="w-full" loading="lazy" decoding="async" />
           <figcaption class="border-t border-white/5 bg-navy-850/60 px-6 py-4 text-sm text-mist-500">
             가톨릭정밀의학연구센터 개소 기념 세미나 · 축복식
           </figcaption>
