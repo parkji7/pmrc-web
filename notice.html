@@ -78,49 +78,94 @@
       </div>
     </section>
 
-    <section id="notices" class="bg-navy-950 py-20 sm:py-28">
+    <!-- 교육 워크샵 -->
+    <section id="workshops" class="bg-navy-950 py-20 sm:py-28">
       <div class="mx-auto max-w-7xl px-5 lg:px-8">
         <div class="reveal max-w-3xl">
           <p class="text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">Workshop</p>
-          <h2 class="mt-4 text-2xl font-bold text-white sm:text-3xl">워크샵 공지</h2>
+          <h2 class="mt-4 text-2xl font-bold text-white sm:text-3xl">교육 워크샵</h2>
+          <p class="mt-5 leading-relaxed text-mist-400">
+            워크샵 상세 내용은 <a href="education.html" class="font-semibold text-brand-400 underline decoration-brand-500/50 underline-offset-4 transition-colors hover:text-brand-300">교육정보</a>에서 확인하실 수 있습니다.
+          </p>
           <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
         </div>
 
-        <ul class="mt-12 space-y-5">
-          <li class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40 sm:p-9">
-            <div class="flex flex-col gap-5 sm:flex-row sm:gap-8">
-              <time datetime="2025-06-05" class="shrink-0 text-sm font-bold tracking-widest text-brand-500 sm:pt-1">2025.06.05</time>
-              <div class="min-w-0">
-                <h3 class="text-lg font-bold leading-snug text-white sm:text-xl">[교육워크샵] TCGAbiolinks를 활용한 암 유전체 데이터 분석</h3>
-                <p class="mt-4 leading-relaxed text-mist-400">본 워크숍은 암 연구에 필수적인 TCGA 데이터베이스에서 데이터를 효율적으로 추출하고 분석하기 위한 R 기반 패키지인 TCGAbiolinks의 활용법을 소개합니다. 이론 및 실습을 통해 생물정보학 분야 연구자, 대학원생 및 관련 분야 종사자들에게 실질적인 분석 역량을 제공할 것입니다.</p>
-              </div>
-            </div>
-          </li>
-          <li class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40 sm:p-9">
-            <div class="flex flex-col gap-5 sm:flex-row sm:gap-8">
-              <time datetime="2025-04-17" class="shrink-0 text-sm font-bold tracking-widest text-brand-500 sm:pt-1">2025.04.17</time>
-              <div class="min-w-0">
-                <h3 class="text-lg font-bold leading-snug text-white sm:text-xl">[교육워크샵] 셀라인 유전체 데이터 분석 워크샵</h3>
-                <p class="mt-4 leading-relaxed text-mist-400">DepMap, 즉 Cancer Dependency Map 프로젝트는 암 연구에서 셀라인을 사용하는 데 있어 중요한 자원입니다. 이번 워크샵은 DepMap 데이터를 활용하여 암 세포의 유전적 특성과 약물 반응성 사이의 관계를 더 깊이 이해하고, 실제 연구에 적용할 수 있는 분석 기법을 배우는 데 중점을 둡니다.</p>
-              </div>
-            </div>
-          </li>
-          <li class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40 sm:p-9">
-            <div class="flex flex-col gap-5 sm:flex-row sm:gap-8">
-              <time datetime="2024-11-22" class="shrink-0 text-sm font-bold tracking-widest text-brand-500 sm:pt-1">2024.11.22</time>
-              <div class="min-w-0">
-                <h3 class="text-lg font-bold leading-snug text-white sm:text-xl">[교육워크샵] CPTAC 암유전체-단백체 데이터 분석</h3>
-                <p class="mt-4 leading-relaxed text-mist-400">TCGA 데이터가 유전체 데이터 중심으로 암 유전적 특성을 규명하는데 활용되었다면, CPTAC(Clinical Proteomic Tumor Analysis Consortium) 데이터는 단백체 데이터를 포함하여 유전체-단백질 통합 분석을 통해 단백질 수준의 기전까지 연구할 수 있습니다. 본 워크샵에서는 CPTAC 데이터의 이해와 실제 분석 방법을 다룰 예정입니다.</p>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <div class="reveal mt-10 overflow-x-auto rounded-2xl border border-white/10">
+          <table class="w-full min-w-[34rem] border-collapse text-left">
+            <caption class="sr-only">가톨릭정밀의학연구센터 교육 워크샵 개최 목록</caption>
+            <thead>
+              <tr class="bg-brand-600/20">
+                <th scope="col" class="border-b border-white/10 px-6 py-5 text-base font-bold text-white w-36">날짜</th>
+                <th scope="col" class="border-b border-white/10 px-6 py-5 text-base font-bold text-white">워크샵</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-white/5 transition-colors last:border-0 hover:bg-white/[0.03]">
+                <th scope="row" class="px-6 py-5 align-top w-36 text-sm font-bold tracking-widest whitespace-nowrap text-brand-500">
+                  <time datetime="2025-06-05">2025.06.05</time>
+                </th>
+                <td class="px-6 py-5 align-top font-medium text-mist-100">TCGAbiolinks를 활용한 암 유전체 데이터 분석</td>
+              </tr>
+              <tr class="border-b border-white/5 transition-colors last:border-0 hover:bg-white/[0.03]">
+                <th scope="row" class="px-6 py-5 align-top w-36 text-sm font-bold tracking-widest whitespace-nowrap text-brand-500">
+                  <time datetime="2025-04-17">2025.04.17</time>
+                </th>
+                <td class="px-6 py-5 align-top font-medium text-mist-100">셀라인 유전체 데이터 분석 워크샵</td>
+              </tr>
+              <tr class="border-b border-white/5 transition-colors last:border-0 hover:bg-white/[0.03]">
+                <th scope="row" class="px-6 py-5 align-top w-36 text-sm font-bold tracking-widest whitespace-nowrap text-brand-500">
+                  <time datetime="2024-11-22">2024.11.22</time>
+                </th>
+                <td class="px-6 py-5 align-top font-medium text-mist-100">CPTAC 암유전체-단백체 데이터 분석</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-        <p class="reveal mt-10 flex items-start gap-2.5 text-sm text-mist-500">
+    <!-- 초청 세미나 -->
+    <section id="seminars" class="border-t border-white/5 bg-navy-900 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">Seminar</p>
+          <h2 class="mt-4 text-2xl font-bold text-white sm:text-3xl">초청 세미나</h2>
+          <p class="mt-5 leading-relaxed text-mist-400">
+            국내외 리더급 연구자를 초청해 세미나를 개최하고 있습니다.
+          </p>
+          <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
+        </div>
+
+        <div class="reveal mt-10 overflow-x-auto rounded-2xl border border-white/10">
+          <table class="w-full min-w-[52rem] border-collapse text-left">
+            <caption class="sr-only">가톨릭정밀의학연구센터 초청 세미나 개최 목록</caption>
+            <thead>
+              <tr class="bg-brand-600/20">
+                <th scope="col" class="border-b border-white/10 px-6 py-5 text-base font-bold text-white">발표 제목</th>
+                <th scope="col" class="border-b border-white/10 px-6 py-5 text-base font-bold text-white w-56">연자</th>
+                <th scope="col" class="border-b border-white/10 px-6 py-5 text-base font-bold text-white w-56">일시</th>
+                <th scope="col" class="border-b border-white/10 px-6 py-5 text-base font-bold text-white w-44">장소</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-white/5 transition-colors last:border-0 hover:bg-white/[0.03]">
+                <th scope="row" class="px-6 py-5 align-top font-bold text-mist-100">Cleavage and Polyadenylation Inhibition: a novel approach to suppress cancer and inflammation</th>
+                <td class="px-6 py-5 align-top">
+                  <span class="block font-medium text-mist-100">Prof. Bin Tian</span>
+                  <span class="mt-0.5 block text-sm text-mist-500">The Wistar Institute, USA</span>
+                </td>
+                <td class="px-6 py-5 align-top whitespace-nowrap text-mist-300"><time datetime="2024-09-30T11:00">2024년 9월 30일(월) 오전 11시</time></td>
+                <td class="px-6 py-5 align-top whitespace-nowrap text-mist-300">옴니버스 파크 L004</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="reveal mt-8 flex items-start gap-2.5 text-sm text-mist-500">
           <svg class="mt-0.5 h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="9" /><path stroke-linecap="round" d="M12 11v5M12 8h.01" />
           </svg>
-          워크샵 신청 및 문의는 <a href="mailto:cmcpmrc@gmail.com" class="mx-1 underline decoration-brand-500/50 underline-offset-4 transition-colors hover:text-brand-400">cmcpmrc@gmail.com</a> 으로 연락 주세요.
+          워크샵 및 세미나 참여 문의는 <a href="mailto:cmcpmrc@gmail.com" class="mx-1 underline decoration-brand-500/50 underline-offset-4 transition-colors hover:text-brand-400">cmcpmrc@gmail.com</a> 으로 연락 주세요.
         </p>
       </div>
     </section>
