@@ -83,108 +83,315 @@
         <div class="reveal max-w-3xl">
           <p class="text-xs font-semibold tracking-[0.22em] text-brand-400 uppercase sm:text-sm">Instruments</p>
           <h2 class="mt-4 text-2xl font-bold text-white sm:text-3xl">보유 장비</h2>
+          <p class="mt-5 leading-relaxed text-mist-400">
+            암 미세환경 연구, 질병 빅데이터 기반 인공지능 연구, 감염체 유전정보 연구에 필요한
+            최신 장비를 갖추고 있습니다. 모두 서울성모병원 별관 7층에 설치되어 있으며, 각 1대씩 운영합니다.
+          </p>
           <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
         </div>
 
-        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
-            <!-- 장비 사진을 assets/img/equipment-1.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
-            <img src="assets/img/equipment-1.png" alt="NextSeq™ 1000 차세대 염기서열 분석기" class="aspect-[4/3] w-full object-cover" loading="lazy" />
-            -->
-            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
-              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
-              </svg>
+        <div class="mt-12 space-y-8">
+        <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60">
+          <div class="grid gap-0 lg:grid-cols-2">
+            <div class="relative">
+              <img src="assets/img/equipment-nextseq1000.jpg" alt="연구실에 설치된 NextSeq 1000 차세대 염기서열 분석기" width="1200" height="1200"
+                   class="aspect-square h-full w-full object-cover" loading="lazy" decoding="async" />
+              <span class="absolute top-5 left-5 rounded-full bg-navy-950/80 px-3 py-1 text-sm font-bold tracking-widest text-brand-400 backdrop-blur-sm">01</span>
             </div>
-            <div class="p-7">
-              <div class="flex items-center gap-3">
-                <span class="text-sm font-bold tracking-widest text-brand-500">01</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">NGS</span>
-              </div>
-              <h3 class="mt-3 text-lg font-bold leading-snug text-white">NextSeq™ 1000 차세대 염기서열 분석기</h3>
-              <p class="mt-2 text-sm text-mist-500">Illumina</p>
+
+            <div class="p-7 sm:p-10">
+              <p class="text-sm font-semibold text-brand-400">Illumina</p>
+              <h3 class="mt-2 text-xl leading-snug font-bold text-white sm:text-2xl">NextSeq™ 1000 차세대 염기서열 분석기</h3>
+
+              <dl class="mt-7">
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">모델명</dt>
+                  <dd class="text-sm text-mist-100">NextSeq™ 1000</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">설치 장소</dt>
+                  <dd class="text-sm text-mist-100">서울성모병원 별관 7층 (7117호)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">데이터 생산량</dt>
+                  <dd class="text-sm text-mist-100">10 Gb ~ 180 Gb</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">시약 키트</dt>
+                  <dd class="text-sm text-mist-100">총 7종 (P1 / P2 Reagents)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">데이터 품질</dt>
+                  <dd class="text-sm text-mist-100">Q30 기준 80% 이상</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">분석 시간</dt>
+                  <dd class="text-sm text-mist-100">Read length에 따라 10 ~ 44시간</dd>
+                </div>
+              </dl>
+
+              <ul class="mt-7 space-y-3 text-mist-400">
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">합성 시퀀싱(SBS) 기술 기반으로 homopolymer 구간과 repeat sequence까지 정확히 분석합니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">10 Gb~180 Gb의 다양한 용량을 지원하며, 타사 샘플 전처리 시약과도 호환됩니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">장비에 탑재된 DRAGEN Bio-IT Platform으로 2차 분석까지 처리합니다.</span>
+                </li>
+              </ul>
             </div>
-          </article>
-          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
-            <!-- 장비 사진을 assets/img/equipment-2.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
-            <img src="assets/img/equipment-2.png" alt="GenexusDx 차세대 염기서열 분석기" class="aspect-[4/3] w-full object-cover" loading="lazy" />
-            -->
-            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
-              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
-              </svg>
+          </div>
+        </article>
+        <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60">
+          <div class="grid gap-0 lg:grid-cols-2">
+            <div class="relative lg:order-2">
+              <img src="assets/img/equipment-genexusdx.jpg" alt="연구실에 설치된 GenexusDx 차세대 염기서열 분석기" width="1200" height="1200"
+                   class="aspect-square h-full w-full object-cover" loading="lazy" decoding="async" />
+              <span class="absolute top-5 left-5 rounded-full bg-navy-950/80 px-3 py-1 text-sm font-bold tracking-widest text-brand-400 backdrop-blur-sm">02</span>
             </div>
-            <div class="p-7">
-              <div class="flex items-center gap-3">
-                <span class="text-sm font-bold tracking-widest text-brand-500">02</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">NGS</span>
-              </div>
-              <h3 class="mt-3 text-lg font-bold leading-snug text-white">GenexusDx 차세대 염기서열 분석기</h3>
-              <p class="mt-2 text-sm text-mist-500">Thermo Fisher Scientific</p>
+
+            <div class="p-7 sm:p-10 lg:order-1">
+              <p class="text-sm font-semibold text-brand-400">Ion Torrent · Thermo Fisher Scientific</p>
+              <h3 class="mt-2 text-xl leading-snug font-bold text-white sm:text-2xl">GenexusDx 차세대 염기서열 분석기</h3>
+
+              <dl class="mt-7">
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">모델명</dt>
+                  <dd class="text-sm text-mist-100">GenexusDx</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">설치 장소</dt>
+                  <dd class="text-sm text-mist-100">서울성모병원 별관 7층 (7117호)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">한 번에 분석</dt>
+                  <dd class="text-sm text-mist-100">최대 32검체 (1-pool 기준)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">동시 실행</dt>
+                  <dd class="text-sm text-mist-100">4종 패널을 4개 lane에서</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">데이터 생산량</dt>
+                  <dd class="text-sm text-mist-100">GX5 48~60M / GX7 80~100M reads</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">DNA to Report</dt>
+                  <dd class="text-sm text-mist-100">24 ~ 30시간</dd>
+                </div>
+              </dl>
+
+              <ul class="mt-7 space-y-3 text-mist-400">
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">sample purification부터 library prep, templating, sequencing, 분석 리포트까지 자동화된 턴키 전자동 NGS 시스템입니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">두 번의 조작(touchpoint)만으로 검체에서 보고서까지 하루 안에 처리합니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">칩과 시약을 장비에 설치한 뒤 2주 동안 나누어 사용할 수 있어, 소량 검체도 기다림 없이 분석합니다.</span>
+                </li>
+              </ul>
             </div>
-          </article>
-          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
-            <!-- 장비 사진을 assets/img/equipment-3.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
-            <img src="assets/img/equipment-3.png" alt="Chromium iX 단일세포 자동분석기" class="aspect-[4/3] w-full object-cover" loading="lazy" />
-            -->
-            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
-              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
-              </svg>
+          </div>
+        </article>
+        <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60">
+          <div class="grid gap-0 lg:grid-cols-2">
+            <div class="relative">
+              <img src="assets/img/equipment-chromiumix.jpg" alt="연구실에 설치된 Chromium iX 단일세포 자동분석기" width="1200" height="1200"
+                   class="aspect-square h-full w-full object-cover" loading="lazy" decoding="async" />
+              <span class="absolute top-5 left-5 rounded-full bg-navy-950/80 px-3 py-1 text-sm font-bold tracking-widest text-brand-400 backdrop-blur-sm">03</span>
             </div>
-            <div class="p-7">
-              <div class="flex items-center gap-3">
-                <span class="text-sm font-bold tracking-widest text-brand-500">03</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">Single-cell</span>
-              </div>
-              <h3 class="mt-3 text-lg font-bold leading-snug text-white">Chromium iX 단일세포 자동분석기</h3>
-              <p class="mt-2 text-sm text-mist-500">10x Genomics</p>
+
+            <div class="p-7 sm:p-10">
+              <p class="text-sm font-semibold text-brand-400">10x Genomics</p>
+              <h3 class="mt-2 text-xl leading-snug font-bold text-white sm:text-2xl">Chromium iX 단일세포 자동분석기</h3>
+
+              <dl class="mt-7">
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">모델명</dt>
+                  <dd class="text-sm text-mist-100">Chromium iX</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">설치 장소</dt>
+                  <dd class="text-sm text-mist-100">서울성모병원 별관 7층 (7113호)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">Chip당 채널 수</dt>
+                  <dd class="text-sm text-mist-100">최대 8채널 (샘플)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">채널당 세포 수</dt>
+                  <dd class="text-sm text-mist-100">500 ~ 10,000 세포</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">캡처 가능 세포 크기</dt>
+                  <dd class="text-sm text-mist-100">5 ~ 35 μm</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">Cell capture rate</dt>
+                  <dd class="text-sm text-mist-100">최대 65% · Doublet 0.8%/1,000 cells</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">실행 시간</dt>
+                  <dd class="text-sm text-mist-100">약 20분</dd>
+                </div>
+              </dl>
+
+              <ul class="mt-7 space-y-3 text-mist-400">
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">단일세포 수준에서 whole transcriptome 발현을 확인해, bulk RNA-seq으로는 볼 수 없는 세포별 발현 차이를 규명합니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">T세포·B세포의 발현 분석과 면역 레퍼토리를 동시에 분석할 수 있어 암 미세환경 연구에 활용됩니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">전사체 외에도 Epigenetics(ATAC), Immune repertoire(TCR/BCR), Protein profiling(CITE-seq)까지 한 장비로 지원합니다.</span>
+                </li>
+              </ul>
             </div>
-          </article>
-          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
-            <!-- 장비 사진을 assets/img/equipment-4.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
-            <img src="assets/img/equipment-4.png" alt="QX200 미세방울 디지털 검출장치" class="aspect-[4/3] w-full object-cover" loading="lazy" />
-            -->
-            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
-              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
-              </svg>
+          </div>
+        </article>
+        <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60">
+          <div class="grid gap-0 lg:grid-cols-2">
+            <div class="relative lg:order-2">
+              <img src="assets/img/equipment-qx200.jpg" alt="연구실에 설치된 QX200 Droplet Digital PCR 시스템" width="1200" height="1200"
+                   class="aspect-square h-full w-full object-cover" loading="lazy" decoding="async" />
+              <span class="absolute top-5 left-5 rounded-full bg-navy-950/80 px-3 py-1 text-sm font-bold tracking-widest text-brand-400 backdrop-blur-sm">04</span>
             </div>
-            <div class="p-7">
-              <div class="flex items-center gap-3">
-                <span class="text-sm font-bold tracking-widest text-brand-500">04</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">Digital PCR</span>
-              </div>
-              <h3 class="mt-3 text-lg font-bold leading-snug text-white">QX200 미세방울 디지털 검출장치</h3>
-              <p class="mt-2 text-sm text-mist-500">Bio-Rad</p>
+
+            <div class="p-7 sm:p-10 lg:order-1">
+              <p class="text-sm font-semibold text-brand-400">Bio-Rad</p>
+              <h3 class="mt-2 text-xl leading-snug font-bold text-white sm:text-2xl">QX200 미세방울 디지털 검출 장치</h3>
+
+              <dl class="mt-7">
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">모델명</dt>
+                  <dd class="text-sm text-mist-100">QX200™ Droplet Digital™ PCR System</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">설치 장소</dt>
+                  <dd class="text-sm text-mist-100">서울성모병원 별관 7층 (7116호)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">처리량</dt>
+                  <dd class="text-sm text-mist-100">96 검체 / 20,000 droplet</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">멀티플렉싱</dt>
+                  <dd class="text-sm text-mist-100">최대 4-Multiplex</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">형광 검출</dt>
+                  <dd class="text-sm text-mist-100">FAM / HEX(VIC) / EvaGreen</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">분해능</dt>
+                  <dd class="text-sm text-mist-100">1 copy resolution</dd>
+                </div>
+              </dl>
+
+              <ul class="mt-7 space-y-3 text-mist-400">
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">기존 RT-PCR 대비 약 1,000배 높은 민감도로, 복잡한 혼합물에서도 타겟 유전자를 분석합니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">절대 정량 분석에 standard curve가 필요 없고 PCR inhibitor의 영향이 매우 적습니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">복잡하고 오래 걸리는 IHC·FISH 검사법을 대체할 수 있습니다.</span>
+                </li>
+              </ul>
             </div>
-          </article>
-          <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 transition-colors hover:border-brand-500/40">
-            <!-- 장비 사진을 assets/img/equipment-5.png 로 저장한 뒤 아래 주석을 해제하고 위 placeholder를 지우세요.
-            <img src="assets/img/equipment-5.png" alt="4150 자동전기영동 시스템" class="aspect-[4/3] w-full object-cover" loading="lazy" />
-            -->
-            <div class="flex aspect-[4/3] items-center justify-center border-b border-white/5 bg-navy-850">
-              <svg class="h-14 w-14 text-brand-500/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" d="M7 9h10M7 13h6M7 17h4" />
-              </svg>
+          </div>
+        </article>
+        <article class="reveal overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60">
+          <div class="grid gap-0 lg:grid-cols-2">
+            <div class="relative">
+              <img src="assets/img/equipment-tapestation4150.jpg" alt="연구실에 설치된 4150 TapeStation 자동전기영동 시스템" width="1200" height="1200"
+                   class="aspect-square h-full w-full object-cover" loading="lazy" decoding="async" />
+              <span class="absolute top-5 left-5 rounded-full bg-navy-950/80 px-3 py-1 text-sm font-bold tracking-widest text-brand-400 backdrop-blur-sm">05</span>
             </div>
-            <div class="p-7">
-              <div class="flex items-center gap-3">
-                <span class="text-sm font-bold tracking-widest text-brand-500">05</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-medium text-mist-400">QC</span>
-              </div>
-              <h3 class="mt-3 text-lg font-bold leading-snug text-white">4150 자동전기영동 시스템</h3>
-              <p class="mt-2 text-sm text-mist-500">Agilent</p>
+
+            <div class="p-7 sm:p-10">
+              <p class="text-sm font-semibold text-brand-400">Agilent Technologies</p>
+              <h3 class="mt-2 text-xl leading-snug font-bold text-white sm:text-2xl">4150 자동전기영동 시스템</h3>
+
+              <dl class="mt-7">
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">모델명</dt>
+                  <dd class="text-sm text-mist-100">4150 TapeStation System</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">설치 장소</dt>
+                  <dd class="text-sm text-mist-100">서울성모병원 별관 7층 (7117호)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">ScreenTape 종류</dt>
+                  <dd class="text-sm text-mist-100">DNA 6종 · RNA 2종 (총 8종)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">lane 수</dt>
+                  <dd class="text-sm text-mist-100">16 lane (부분 사용 가능)</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">시료당 소요시간</dt>
+                  <dd class="text-sm text-mist-100">1 ~ 2분</dd>
+                </div>
+                <div class="flex flex-col gap-0.5 border-b border-white/5 py-3 last:border-0 sm:flex-row sm:gap-4">
+                  <dt class="shrink-0 text-sm font-semibold text-mist-500 sm:w-44">16검체 분석</dt>
+                  <dd class="text-sm text-mist-100">20분 이내 완료</dd>
+                </div>
+              </dl>
+
+              <ul class="mt-7 space-y-3 text-mist-400">
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">바로 사용 가능한 ScreenTape와 자동 injection 장치로 간편하게 전기영동을 수행합니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">ScreenTape 교체만으로 다양한 size·농도의 DNA 및 RNA 분석으로 전환할 수 있습니다.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="leading-relaxed">결과를 digital data로 확보해 정확도와 재현성을 높입니다.</span>
+                </li>
+              </ul>
             </div>
-          </article>
+          </div>
+        </article>
         </div>
 
-        <p class="reveal mt-10 flex items-start gap-2.5 text-sm text-mist-500">
-          <svg class="mt-0.5 h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" /><path stroke-linecap="round" d="M12 11v5M12 8h.01" />
-          </svg>
-          장비 사진과 상세 사양은 준비 중입니다. 장비 이용 문의는 <a href="mailto:cmcpmrc@gmail.com" class="ml-1 underline decoration-brand-500/50 underline-offset-4 transition-colors hover:text-brand-400">cmcpmrc@gmail.com</a> 으로 연락 주세요.
-        </p>
+        <div class="reveal mt-12 rounded-2xl border border-brand-500/25 bg-gradient-to-br from-brand-600/20 to-navy-850 p-8 sm:p-10">
+          <h3 class="text-xl font-bold text-white">장비 이용 문의</h3>
+          <p class="mt-3 leading-relaxed text-mist-300">
+            장비 사용 및 분석 의뢰를 원하시면 아래 연락처로 문의해 주세요.
+          </p>
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <a href="mailto:cmcpmrc@gmail.com" class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-500 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-brand-600">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5l8.5 6 8.5-6" /></svg>
+              cmcpmrc@gmail.com
+            </a>
+            <a href="services.html" class="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-6 py-3.5 font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/5">
+              분석서비스 안내 보기
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>

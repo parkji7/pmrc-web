@@ -61,18 +61,11 @@ npm run build:css    # css/tailwind.css 재생성
 영문 자료를 한글로 옮긴 것이므로, 원본 한글 표현과 다를 수 있습니다. 확인 후 알려주시면
 문구를 맞추겠습니다.
 
-## 아직 채워야 할 내용
+## 장비 자료 출처
 
-| 위치 | 필요한 것 | 저장할 파일명 |
-|---|---|---|
-| `equipment.html` | 장비 사진 5장 | `assets/img/equipment-1.png` ~ `equipment-5.png` |
-
-장비 사진은 영문 사이트에도 장비 페이지가 없어 확보하지 못했습니다. Google Sites 편집
-화면에서 직접 내려받아 위 파일명으로 저장한 뒤, `equipment.html`의 주석 처리된 `<img>`
-태그만 해제하면 됩니다.
-
-> 참고: `equipment.html`의 제조사 표기(Illumina, Thermo Fisher, 10x Genomics, Bio-Rad,
-> Agilent)는 원본에 없던 정보로, 장비명으로부터 확인해 추가한 것입니다. 불필요하면 삭제하세요.
+`equipment.html`의 장비 사진과 사양은 **초정밀의학사업단 설명회 자료(2024-01-05)**에서
+가져왔습니다. 설치 사진은 해당 PDF에 실린 실제 설치 현장 사진을 추출한 것입니다.
+원본 PDF는 내부 발표 자료이므로 이 공개 저장소에는 포함하지 않았습니다.
 
 영문 사이트(https://en.pmrc.re.kr)는 아직 Google Sites에 남아 있으며, 이 저장소로 옮기지
 않았습니다. 헤더의 ENG 버튼이 그쪽으로 연결됩니다.
