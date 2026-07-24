@@ -9,6 +9,7 @@
   workshop-cancer-genomics.jpg   - 암 유전체 데이터 분석 워크샵      (education.html)
   workshop-depmap.jpg            - 셀라인(DepMap) 분석 워크샵         (education.html)
   workshop-gtex.jpg              - 다조직(GTEx) 분석 워크샵           (education.html)
+  director.jpg                   - 센터장 정연준 사진 (1031x1600 원본 해상도) (about.html)
   about-opening-seminar.jpg      - 개소 기념 세미나·축복식            (about.html)
   seminar-2024-bin-tian.jpg      - 2024 초청 세미나 포스터            (research.html)
   seminar-2024-photo.jpg         - 2024 초청 세미나 현장              (research.html)
