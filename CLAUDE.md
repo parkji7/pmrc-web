@@ -25,7 +25,19 @@ notice.html     공지사항     — 워크샵 공지
 css/tailwind.src.css  Tailwind 소스 (@theme 색상 토큰, .reveal 등 커스텀)
 css/tailwind.css      빌드 결과물 — 커밋 대상
 js/main.js            헤더 스크롤 상태 / 모바일 메뉴 / .reveal 애니메이션 / 연도
+js/publications.js    research.html 전용 — PubMed 최신 논문 10편 실시간 조회
 ```
+
+## 논문 목록 (research.html)
+
+PubMed E-utilities(esearch + esummary)를 브라우저에서 직접 호출한다. 두 엔드포인트
+모두 `Access-Control-Allow-Origin: *`이라 서버 없이 동작한다. 검색어를 바꾸려면
+`js/publications.js`의 `QUERY` 상수만 고치면 되고, 하단 '전체 목록 보기' 링크도
+같은 값으로 자동 생성된다.
+
+**주의**: 이 파일은 HTML 문자열을 만들어 넣으므로 Tailwind 클래스가 JS 안에 들어있다.
+`tailwind.src.css`의 `@source "../js/**/*.js"` 설정이 이를 스캔하므로 지우지 말 것.
+JS 안에서 클래스를 새로 쓰면 반드시 `npm run build:css`를 다시 돌려야 한다.
 
 헤더와 푸터는 7개 파일에 각각 복제되어 있다. **한쪽만 고치지 말 것** —
 메뉴나 연락처를 바꾸면 7개 파일 모두 동일하게 수정해야 한다.
