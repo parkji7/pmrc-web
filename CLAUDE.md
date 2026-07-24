@@ -63,3 +63,14 @@ python3 -m http.server 8000   # http://localhost:8000
   (초기 디자인 시안에 있던 `pmrc@catholic.ac.kr`, `02-2258-xxxx`, 서울성모병원 주소는 오류였다.)
 - 아직 못 옮긴 내용은 `assets/img/README.txt`에 목록으로 정리되어 있다.
   해당 위치에는 주석 처리된 `<img>`가 준비되어 있으니, 파일이 생기면 주석만 해제한다.
+
+## 원본 자료를 더 찾아야 할 때
+
+한글 사이트(www.pmrc.re.kr)의 이미지는 `lh3.googleusercontent.com/sitesv/...` URL로
+제공되는데 외부 요청이 403으로 차단된다. 반면 **영문 사이트 en.pmrc.re.kr의 이미지는
+정상 다운로드된다.** 한글 페이지에서 이미지로만 된 내용을 찾아야 하면 영문 사이트의
+대응 페이지(`/about-us`, `/analysis-services`, `/our-research`, `/training-programs`,
+`/whats-new`)를 먼저 확인할 것. 단, 영문 사이트에는 장비 페이지가 없다.
+
+영문 자료를 한글로 옮긴 부분(분석서비스 표·신청방법, 조직도)은 원본 한글 표현과 다를 수
+있으므로, 사용자가 원문을 주면 그쪽을 우선한다.

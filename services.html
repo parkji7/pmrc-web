@@ -84,40 +84,83 @@
           <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
         </div>
 
-        <dl class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
-            <dt class="text-lg font-bold text-white">암 유전자 패널 분석</dt>
-            <dd class="mt-3 leading-relaxed text-mist-400">암 환자 맞춤 치료를 위한 유전자 변이 검사</dd>
+        <!-- 데스크톱: 표 / 모바일: 카드. 같은 내용을 화면 크기에 맞게 두 가지로 제공한다. -->
+        <div class="reveal mt-12 hidden overflow-x-auto rounded-2xl border border-white/10 md:block">
+          <table class="w-full min-w-[46rem] border-collapse text-left">
+            <caption class="sr-only">가톨릭정밀의학연구센터 대표 분석 서비스 항목 및 설명</caption>
+            <thead>
+              <tr class="bg-brand-600/20">
+                <th scope="col" class="w-[34%] border-b border-white/10 px-7 py-5 text-base font-bold text-white">항목</th>
+                <th scope="col" class="border-b border-white/10 px-7 py-5 text-base font-bold text-white">설명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-white/5 transition-colors hover:bg-white/[0.03]">
+                <th scope="row" class="px-7 py-6 align-top font-bold text-mist-100">
+                  단일세포 유전체 분석<span class="mt-1 block text-sm font-medium text-mist-500">10X Genomics</span>
+                </th>
+                <td class="px-7 py-6 align-top leading-relaxed">단일세포 수준의 유전체 분석을 통해 세포 이질성을 규명하고, 희귀 세포군을 식별하며, 세포 분화 과정을 추적합니다.</td>
+              </tr>
+              <tr class="border-b border-white/5 transition-colors hover:bg-white/[0.03]">
+                <th scope="row" class="px-7 py-6 align-top font-bold text-mist-100">
+                  전장 전사체 분석<span class="mt-1 block text-sm font-medium text-mist-500">Illumina</span>
+                </th>
+                <td class="px-7 py-6 align-top leading-relaxed">전장 전사체 시퀀싱을 통해 유전자 발현 프로파일을 분석하고, 대체 스플라이싱을 포함한 전사체 수준의 변이를 검출합니다.</td>
+              </tr>
+              <tr class="border-b border-white/5 transition-colors hover:bg-white/[0.03]">
+                <th scope="row" class="px-7 py-6 align-top font-bold text-mist-100">
+                  전장 엑솜 분석<span class="mt-1 block text-sm font-medium text-mist-500">Illumina</span>
+                </th>
+                <td class="px-7 py-6 align-top leading-relaxed">엑솜 영역 전체를 시퀀싱하여 질병과 관련된 유전 변이를 분석하고 진단합니다.</td>
+              </tr>
+              <tr class="border-b border-white/5 transition-colors hover:bg-white/[0.03]">
+                <th scope="row" class="px-7 py-6 align-top font-bold text-mist-100">
+                  디지털 드롭릿 PCR<span class="mt-1 block text-sm font-medium text-mist-500">Bio-Rad QX200 system</span>
+                </th>
+                <td class="px-7 py-6 align-top leading-relaxed">미량의 DNA/RNA를 절대 정량하여 희귀 변이와 유전자 복제수 변이(CNV)를 정밀하게 검출합니다.</td>
+              </tr>
+              <tr class="border-b border-white/5 transition-colors hover:bg-white/[0.03]">
+                <th scope="row" class="px-7 py-6 align-top font-bold text-mist-100">
+                  OncoChase 암 패널 시퀀싱<span class="mt-1 block text-sm font-medium text-mist-500">Ion S5 / Genexus system</span>
+                </th>
+                <td class="px-7 py-6 align-top leading-relaxed">암 관련 핵심 유전자 95종을 표적 시퀀싱하여 정밀 진단과 개인 맞춤 치료 방향을 제시합니다.</td>
+              </tr>
+              <tr class="transition-colors hover:bg-white/[0.03]">
+                <th scope="row" class="px-7 py-6 align-top font-bold text-mist-100">
+                  OncoChase 암 패널 시퀀싱<span class="mt-1 block text-sm font-medium text-mist-500">Illumina</span>
+                </th>
+                <td class="px-7 py-6 align-top leading-relaxed">암 관련 유전자 157종으로 확장된 패널을 사용하여 종합적인 암 진단 및 치료 전략을 수립합니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <dl class="mt-12 grid gap-6 md:hidden">
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7">
+            <dt class="text-lg font-bold text-white">단일세포 유전체 분석<span class="mt-1 block text-sm font-medium text-mist-500">10X Genomics</span></dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">단일세포 수준의 유전체 분석을 통해 세포 이질성을 규명하고, 희귀 세포군을 식별하며, 세포 분화 과정을 추적합니다.</dd>
           </div>
-          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
-            <dt class="text-lg font-bold text-white">전장 엑솜 분석 (WES)</dt>
-            <dd class="mt-3 leading-relaxed text-mist-400">질병 관련 유전자 전체를 분석하여 희귀질환 원인 규명</dd>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7">
+            <dt class="text-lg font-bold text-white">전장 전사체 분석<span class="mt-1 block text-sm font-medium text-mist-500">Illumina</span></dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">전장 전사체 시퀀싱을 통해 유전자 발현 프로파일을 분석하고, 대체 스플라이싱을 포함한 전사체 수준의 변이를 검출합니다.</dd>
           </div>
-          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
-            <dt class="text-lg font-bold text-white">전장 유전체 분석 (WGS)</dt>
-            <dd class="mt-3 leading-relaxed text-mist-400">개인의 모든 유전 정보를 해독하여 포괄적 건강 정보 제공</dd>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7">
+            <dt class="text-lg font-bold text-white">전장 엑솜 분석<span class="mt-1 block text-sm font-medium text-mist-500">Illumina</span></dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">엑솜 영역 전체를 시퀀싱하여 질병과 관련된 유전 변이를 분석하고 진단합니다.</dd>
           </div>
-          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
-            <dt class="text-lg font-bold text-white">롱리드 시퀀싱</dt>
-            <dd class="mt-3 leading-relaxed text-mist-400">기존 방법으로 찾기 어려운 복잡한 유전 변이까지 정밀 분석</dd>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7">
+            <dt class="text-lg font-bold text-white">디지털 드롭릿 PCR<span class="mt-1 block text-sm font-medium text-mist-500">Bio-Rad QX200 system</span></dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">미량의 DNA/RNA를 절대 정량하여 희귀 변이와 유전자 복제수 변이(CNV)를 정밀하게 검출합니다.</dd>
           </div>
-          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
-            <dt class="text-lg font-bold text-white">단일세포 분석</dt>
-            <dd class="mt-3 leading-relaxed text-mist-400">세포 하나하나의 유전자 발현을 분석하여 질병 메커니즘 규명</dd>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7">
+            <dt class="text-lg font-bold text-white">OncoChase 암 패널 시퀀싱<span class="mt-1 block text-sm font-medium text-mist-500">Ion S5 / Genexus system</span></dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">암 관련 핵심 유전자 95종을 표적 시퀀싱하여 정밀 진단과 개인 맞춤 치료 방향을 제시합니다.</dd>
           </div>
-          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7 transition-colors hover:border-brand-500/40">
-            <dt class="text-lg font-bold text-white">AI 데이터 분석</dt>
-            <dd class="mt-3 leading-relaxed text-mist-400">인공지능으로 복잡한 유전체 데이터를 해석하고 임상적 의미 도출</dd>
+          <div class="reveal rounded-2xl border border-white/10 bg-navy-900/60 p-7">
+            <dt class="text-lg font-bold text-white">OncoChase 암 패널 시퀀싱<span class="mt-1 block text-sm font-medium text-mist-500">Illumina</span></dt>
+            <dd class="mt-3 leading-relaxed text-mist-400">암 관련 유전자 157종으로 확장된 패널을 사용하여 종합적인 암 진단 및 치료 전략을 수립합니다.</dd>
           </div>
         </dl>
-
-        <!--
-          원본 Google Sites의 "대표 서비스 항목"에는 상세 표 이미지가 함께 있었습니다.
-          해당 이미지를 assets/img/service-items.png 로 저장한 뒤 아래 주석을 해제하세요.
-        <figure class="reveal mt-10 overflow-hidden rounded-2xl border border-white/10">
-          <img src="assets/img/service-items.png" alt="대표 서비스 항목 상세표" class="w-full" loading="lazy" />
-        </figure>
-        -->
       </div>
     </section>
 
@@ -130,14 +173,33 @@
           <div class="rule-gradient mt-6 h-px w-24" aria-hidden="true"></div>
         </div>
 
-        <!--
-          ⚠️ 원본의 "신청방법" 안내는 이미지로만 제공되어 텍스트를 옮겨오지 못했습니다.
-             절차 문구를 알려주시면 단계별로 채워 넣겠습니다.
-             (이미지를 그대로 쓰려면 assets/img/service-apply.png 로 저장 후 아래 주석 해제)
-        <figure class="reveal mt-10 overflow-hidden rounded-2xl border border-white/10">
-          <img src="assets/img/service-apply.png" alt="분석서비스 신청방법 안내" class="w-full" loading="lazy" />
-        </figure>
-        -->
+        <ol class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
+          <li class="reveal relative flex flex-col rounded-2xl border border-white/10 bg-navy-850/70 p-7 transition-colors hover:border-brand-500/40">
+            <span class="text-sm font-bold tracking-widest text-brand-400">Step 01</span>
+            <span class="mt-3 text-lg font-bold leading-snug text-white">분석 의뢰</span>
+            <span class="mt-1.5 text-sm text-mist-500">Request for Analysis</span>
+          </li>
+          <li class="reveal relative flex flex-col rounded-2xl border border-white/10 bg-navy-850/70 p-7 transition-colors hover:border-brand-500/40">
+            <span class="text-sm font-bold tracking-widest text-brand-400">Step 02</span>
+            <span class="mt-3 text-lg font-bold leading-snug text-white">상담 및 견적</span>
+            <span class="mt-1.5 text-sm text-mist-500">Consultation &amp; Quotation</span>
+          </li>
+          <li class="reveal relative flex flex-col rounded-2xl border border-white/10 bg-navy-850/70 p-7 transition-colors hover:border-brand-500/40">
+            <span class="text-sm font-bold tracking-widest text-brand-400">Step 03</span>
+            <span class="mt-3 text-lg font-bold leading-snug text-white">시료 접수</span>
+            <span class="mt-1.5 text-sm text-mist-500">Sample Submission</span>
+          </li>
+          <li class="reveal relative flex flex-col rounded-2xl border border-white/10 bg-navy-850/70 p-7 transition-colors hover:border-brand-500/40">
+            <span class="text-sm font-bold tracking-widest text-brand-400">Step 04</span>
+            <span class="mt-3 text-lg font-bold leading-snug text-white">실험 및 분석</span>
+            <span class="mt-1.5 text-sm text-mist-500">Experiment &amp; Analysis</span>
+          </li>
+          <li class="reveal relative flex flex-col rounded-2xl border border-brand-500/30 bg-gradient-to-br from-brand-600/25 to-navy-850 p-7">
+            <span class="text-sm font-bold tracking-widest text-brand-300">Step 05</span>
+            <span class="mt-3 text-lg font-bold leading-snug text-white">결과 보고</span>
+            <span class="mt-1.5 text-sm text-mist-400">Result Reporting</span>
+          </li>
+        </ol>
 
         <div class="reveal mt-10 rounded-2xl border border-brand-500/25 bg-gradient-to-br from-brand-600/20 to-navy-850 p-8 sm:p-10">
           <h3 class="text-xl font-bold text-white">분석서비스 문의 및 신청</h3>

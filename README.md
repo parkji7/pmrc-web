@@ -47,21 +47,32 @@ npm run build:css    # css/tailwind.css 재생성
 `main` 브랜치에 push하면 GitHub Pages가 자동 배포합니다.
 현재 주소: https://parkji7.github.io/pmrc-web/
 
-## 아직 채워야 할 내용
+## 콘텐츠 출처
 
-원본 Google Sites에서 **이미지로만** 제공되던 부분이라 텍스트를 옮겨오지 못했습니다.
-(Google이 이미지 직접 다운로드를 차단해 자동 수집도 불가했습니다. Google Sites 편집 화면에서
-직접 내려받아 `assets/img/`에 저장해 주세요.)
+한글 사이트(www.pmrc.re.kr)의 이미지는 Google이 외부 다운로드를 차단(403)해 가져올 수
+없었습니다. 대신 **영문 사이트(en.pmrc.re.kr)의 동일 자료**는 접근이 가능해, 이미지로만
+제공되던 다음 내용을 그쪽에서 확보해 한글로 옮겼습니다.
+
+- 분석서비스 「대표 서비스 항목」 상세표 6종 → `services.html`에 HTML 표로 재작성
+- 분석서비스 「신청방법」 5단계 → `services.html`에 단계 카드로 재작성
+- 조직도 → `about.html`에 HTML 도식으로 재작성 (이미지 대신, 반응형·한글)
+- 개소 기념 세미나 사진, 2024 초청 세미나 포스터·현장 사진 → 각 페이지에 삽입
+
+영문 자료를 한글로 옮긴 것이므로, 원본 한글 표현과 다를 수 있습니다. 확인 후 알려주시면
+문구를 맞추겠습니다.
+
+## 아직 채워야 할 내용
 
 | 위치 | 필요한 것 | 저장할 파일명 |
 |---|---|---|
-| `services.html` 대표 서비스 항목 | 상세표 이미지 | `assets/img/service-items.png` |
-| `services.html` 신청방법 | 절차 안내 (텍스트로 주시면 단계별로 구성) | `assets/img/service-apply.png` |
 | `equipment.html` | 장비 사진 5장 | `assets/img/equipment-1.png` ~ `equipment-5.png` |
-| `about.html` 조직구성 | 조직도 이미지 (선택) | `assets/img/org-chart.png` |
 
-각 파일의 해당 위치에 주석 처리된 `<img>` 태그가 준비되어 있습니다. 파일을 저장한 뒤 주석만
-해제하면 됩니다.
+장비 사진은 영문 사이트에도 장비 페이지가 없어 확보하지 못했습니다. Google Sites 편집
+화면에서 직접 내려받아 위 파일명으로 저장한 뒤, `equipment.html`의 주석 처리된 `<img>`
+태그만 해제하면 됩니다.
 
-또한 영문 사이트(https://en.pmrc.re.kr)는 아직 Google Sites에 남아 있으며, 이 저장소로 옮기지
-않았습니다.
+> 참고: `equipment.html`의 제조사 표기(Illumina, Thermo Fisher, 10x Genomics, Bio-Rad,
+> Agilent)는 원본에 없던 정보로, 장비명으로부터 확인해 추가한 것입니다. 불필요하면 삭제하세요.
+
+영문 사이트(https://en.pmrc.re.kr)는 아직 Google Sites에 남아 있으며, 이 저장소로 옮기지
+않았습니다. 헤더의 ENG 버튼이 그쪽으로 연결됩니다.
