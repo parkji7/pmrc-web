@@ -32,12 +32,12 @@ en/equipment.html      Equipment
 en/education.html      Training Programs
                        (영문판에는 공지사항에 해당하는 페이지가 없다)
 
-seminar/               초청세미나 원본 자료(공고문 pdf + 현장 사진)
+seminar/               초청세미나 원본 자료(공고문 pdf + 현장 사진). 커밋 대상이다.
+                       사이트에서 링크하지는 않지만 Pages가 저장소 전체를 서빙하므로
+                       parkji7.github.io/pmrc-web/seminar/<날짜>.pdf 로 접근된다.
+                       공개해도 된다는 확인을 받았다(2026-07-27).
 workshop.pmrc.xlsx     education.html '교육 워크샵' 표의 원본. 날짜는 엑셀 serial 값이라
                        1899-12-30 기준으로 환산해야 한다
-                       ↑ 이 둘은 .gitignore 로 제외되어 로컬에만 있다. 저장소가 공개이고
-                         Pages가 저장소 전체를 서빙해서, 커밋하면 pdf·원본 사진이 URL로
-                         노출되기 때문이다. 변환 결과물만 assets/img/ 에 커밋한다.
 
 css/tailwind.src.css  Tailwind 소스 (@theme 색상 토큰, .reveal 등 커스텀)
 css/tailwind.css      빌드 결과물 — 커밋 대상
@@ -97,7 +97,7 @@ JS 안에서 클래스를 새로 쓰면 반드시 `npm run build:css`를 다시 
 `seminar/<YYYYMMDD>.pdf`(공고문)와 `seminar/<YYYYMMDD>.jpg`(현장 사진)를 넣은 뒤
 1400x1050(4:3) JPG로 변환해 `assets/img/seminar-<YYYYMMDD>-poster.jpg` /
 `-photo.jpg`로 저장하고, education.html `#seminars`의 `<article>`을 최신이 위에
-오도록 하나 복제해 채운다. 공고문 pdf는 그대로 배포하지 않는다.
+오도록 하나 복제해 채운다. 원본 pdf·사진도 seminar/ 에 함께 커밋한다.
 
 ## CSS 수정 시
 
