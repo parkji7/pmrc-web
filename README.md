@@ -45,6 +45,15 @@ npm run build:css    # css/tailwind.css 재생성
 빌드 결과물(`css/tailwind.css`)은 반드시 **함께 커밋**해야 합니다. GitHub Pages는 빌드를 돌리지 않고
 저장소의 파일을 그대로 서빙합니다.
 
+## 교육 워크샵 추가
+
+표를 손으로 고치지 말고 `workshop.pmrc.xlsx`(A 날짜 / B 한글 제목 / C 영문 제목)에 줄을 넣은 뒤
+아래를 실행하면 한글·영문 표가 함께 갱신됩니다. 최신순 정렬도 자동입니다.
+
+```bash
+npm run sync:workshops
+```
+
 ## 배포
 
 `main` 브랜치에 push하면 GitHub Pages가 자동 배포합니다.

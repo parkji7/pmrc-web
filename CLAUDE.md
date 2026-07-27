@@ -36,8 +36,9 @@ seminar/               초청세미나 원본 자료(공고문 pdf + 현장 사�
                        사이트에서 링크하지는 않지만 Pages가 저장소 전체를 서빙하므로
                        parkji7.github.io/pmrc-web/seminar/<날짜>.pdf 로 접근된다.
                        공개해도 된다는 확인을 받았다(2026-07-27).
-workshop.pmrc.xlsx     education.html '교육 워크샵' 표의 원본. 날짜는 엑셀 serial 값이라
-                       1899-12-30 기준으로 환산해야 한다
+workshop.pmrc.xlsx     교육 워크샵 표의 원본(A 날짜 / B 한글 제목 / C 영문 제목).
+                       tools/sync-workshops.py 가 이걸 읽어 표를 만든다
+tools/sync-workshops.py  엑셀 -> education.html + en/education.html 표 동기화
 
 css/tailwind.src.css  Tailwind 소스 (@theme 색상 토큰, .reveal 등 커스텀)
 css/tailwind.css      빌드 결과물 — 커밋 대상
@@ -98,6 +99,25 @@ JS 안에서 클래스를 새로 쓰면 반드시 `npm run build:css`를 다시 
 1400x1050(4:3) JPG로 변환해 `assets/img/seminar-<YYYYMMDD>-poster.jpg` /
 `-photo.jpg`로 저장하고, education.html `#seminars`의 `<article>`을 최신이 위에
 오도록 하나 복제해 채운다. 원본 pdf·사진도 seminar/ 에 함께 커밋한다.
+
+## 교육 워크샵 추가·수정 (education.html)
+
+표를 손으로 고치지 말 것. **원본은 `workshop.pmrc.xlsx` 하나뿐이다.**
+
+    A열  날짜           셀 서식을 날짜로 둔다 (내부적으로 엑셀 serial 값)
+    B열  워크샵          한글 제목 -> education.html
+    C열  Workshop (EN)   영문 제목 -> en/education.html
+
+엑셀에 줄을 추가하거나 고친 뒤 아래를 돌리면 한글·영문 표가 함께 갱신된다.
+정렬(최신순)도 스크립트가 하므로 엑셀에서는 아무 순서로 넣어도 된다.
+
+```bash
+npm run sync:workshops
+python3 tools/sync-workshops.py --check   # 고치지 않고 어긋난 곳만 확인
+```
+
+C열이 비어 있으면 스크립트가 어느 줄인지 알려주고 멈춘다. 영문 제목을 채워야
+영문 페이지가 완성된다. 결과물(두 html)은 함께 커밋한다.
 
 ## CSS 수정 시
 

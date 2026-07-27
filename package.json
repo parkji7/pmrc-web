@@ -6,6 +6,7 @@
   "scripts": {
     "build:css": "tailwindcss -i css/tailwind.src.css -o css/tailwind.css --minify",
     "watch:css": "tailwindcss -i css/tailwind.src.css -o css/tailwind.css --watch",
+    "sync:workshops": "python3 tools/sync-workshops.py",
     "serve": "python3 -m http.server 8000"
   },
   "repository": {
