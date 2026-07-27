@@ -14,3 +14,10 @@ Thumbs.db
 node_modules/
 .cache/
 *.log
+
+# 원본 자료 — 배포에 쓰이지 않고 로컬에만 둔다.
+# 이 저장소는 공개이고 GitHub Pages가 저장소 전체를 서빙하므로,
+# 커밋하면 공고문 pdf와 원본 사진이 URL로 그대로 노출된다.
+# 여기서 만든 결과물(assets/img/seminar-*.jpg)만 커밋한다.
+seminar/
+workshop.pmrc.xlsx

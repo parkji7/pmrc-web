@@ -5,6 +5,7 @@
 @import "tailwindcss";
 
 @source "../*.html";
+@source "../en/*.html";
 @source "../js/**/*.js";
 
 @theme {

@@ -11,8 +11,11 @@ about.html          # 연구소 소개 — 센터장 인사말, 연혁, 연구�
 research.html       # 연구성과 — PubMed 연동 논문, 특허, 학술활동
 services.html       # 분석서비스 — 대표 서비스 항목, 신청방법
 equipment.html      # 장비소개 — 보유 장비 5종
-education.html      # 교육정보 — 분석 워크샵 3종
-notice.html         # 공지사항 — 워크샵 공지
+education.html      # 교육정보 — 분석 워크샵 3종, 교육 워크샵 목록, 초청세미나 공고문·현장 사진
+notice.html         # (메뉴에서 제외) 예전 공지사항 페이지 — 내용은 education.html로 이동
+
+en/                 # 영문판. 위 6개 페이지에 1:1 대응 (공지사항 없음)
+                    #   헤더 ENG ↔ KOR 버튼으로 왕복. 에셋·CSS·JS는 한글판과 공유
 
 css/tailwind.src.css  # Tailwind 소스 (테마·커스텀 스타일)
 css/tailwind.css      # 빌드 결과물 — 커밋되어 있음. 배포 시 빌드 불필요

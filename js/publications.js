@@ -7,9 +7,34 @@
  *
  * 검색어를 바꾸려면 아래 QUERY만 수정하면 된다. 페이지 하단의
  * 'PubMed에서 전체 목록 보기' 링크도 같은 검색어로 자동 생성된다.
+ *
+ * 한글판(research.html)과 영문판(en/research.html)이 같은 파일을 공유한다.
+ * 화면에 나가는 문구는 <html lang>을 보고 고른다.
  */
 (function () {
   'use strict';
+
+  var EN = (document.documentElement.lang || 'ko').toLowerCase().indexOf('en') === 0;
+
+  var T = EN
+    ? {
+        locale: 'en-US',
+        count: function (total, shown) {
+          return 'Showing the ' + shown + ' most recent of ' + total + ' publications';
+        },
+        more: function (n) { return ' and ' + n + ' more'; },
+        error: 'Could not load the publication list from PubMed. Please try again in a moment, ' +
+               'or use &lsquo;View the full list on PubMed&rsquo; below.'
+      }
+    : {
+        locale: 'ko-KR',
+        count: function (total, shown) {
+          return '전체 ' + total + '편 중 최근 ' + shown + '편';
+        },
+        more: function (n) { return ' 외 ' + n + '명'; },
+        error: 'PubMed에서 논문 목록을 불러오지 못했습니다. 잠시 후 다시 시도하시거나, ' +
+               '아래 &lsquo;PubMed에서 전체 목록 보기&rsquo;를 이용해 주세요.'
+      };
 
   var QUERY =
     '(("Precision Medicine Research Center") AND ("The Catholic University of Korea")) OR ' +
@@ -58,7 +83,7 @@
       .map(function (a) { return a.name; });
     if (!names.length) return '';
     if (names.length <= 6) return esc(names.join(', '));
-    return esc(names.slice(0, 6).join(', ')) + ' 외 ' + (names.length - 6) + '명';
+    return esc(names.slice(0, 6).join(', ')) + T.more(names.length - 6);
   }
 
   function doiOf(item) {
@@ -120,8 +145,7 @@
     listEl.setAttribute('aria-busy', 'false');
     listEl.innerHTML =
       '<li class="rounded-2xl border border-white/10 bg-navy-900/60 p-7 leading-relaxed text-mist-400">' +
-        'PubMed에서 논문 목록을 불러오지 못했습니다. 잠시 후 다시 시도하시거나, ' +
-        '아래 &lsquo;PubMed에서 전체 목록 보기&rsquo;를 이용해 주세요.' +
+        T.error +
       '</li>';
   }
 
@@ -135,8 +159,7 @@
       if (!ids.length) throw new Error('검색 결과 없음');
 
       if (countEl && res.count) {
-        countEl.textContent = '전체 ' + Number(res.count).toLocaleString('ko-KR') +
-          '편 중 최근 ' + ids.length + '편';
+        countEl.textContent = T.count(Number(res.count).toLocaleString(T.locale), ids.length);
         countEl.classList.remove('hidden');
       }
 
