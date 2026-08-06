@@ -123,10 +123,15 @@ JS 안에서 클래스를 새로 쓰면 반드시 `npm run build:css`를 다시 
 
 ## 초청세미나 자료 추가 (education.html)
 
-`seminar/<YYYYMMDD>.pdf`(공고문)와 `seminar/<YYYYMMDD>.jpg`(현장 사진)를 넣은 뒤
-1400x1050(4:3) JPG로 변환해 `assets/img/seminar-<YYYYMMDD>-poster.jpg` /
-`-photo.jpg`로 저장하고, education.html `#seminars`의 `<article>`을 최신이 위에
-오도록 하나 복제해 채운다. 원본 pdf·사진도 seminar/ 에 함께 커밋한다.
+`seminar/<YYYYMMDD>.pdf`(공고문)를 넣은 뒤 1400x1050(4:3) JPG로 변환해
+`assets/img/seminar-<YYYYMMDD>-poster.jpg`로 저장하고, education.html `#seminars`의
+`<article>`을 최신이 위에 오도록 하나 복제해 채운다(포스터 이미지 하나만 있는
+`<div class="mt-7 max-w-md">` 블록). 원본 pdf도 seminar/ 에 함께 커밋한다.
+
+**현장 사진(참석자 등 개인이 나오는 사진)은 사이트에 게시하지 않는다.** 예전에는
+`-photo.jpg`로 변환해 포스터 옆에 나란히 실었지만(2026-08-06 제거), 개인정보 문제로
+중단했다. 현장 사진 원본이 있어도 seminar/ 에 커밋하지 말 것 — 필요하면 `pmrc-data`
+쪽에 둔다.
 
 발표자명·제목은 파일명(날짜)만으로는 알 수 없다. `pmrc-data`에 관련 비공개 메모가
 있으면 그걸 참고하고, 없으면 지어내지 말고 날짜 + 포스터(공고문 pdf) 정도로만 카드를
