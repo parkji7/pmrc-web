@@ -13,23 +13,37 @@
 
 ## 저장소 구조 (Public/Private 분리)
 
-- **C:\pmrc-web** (본 저장소, public): 실제 웹사이트 결과물만 관리
-  - GitHub: cmcpmrc/pmrc-web
-  - HTML, CSS, JS, 이미지, PDF 등 사이트에 게시되는 최종 파일만 포함
-- **C:\pmrc-data** (별도 저장소, private): 민감하거나 원본 형태의 작업 데이터 관리
-  - GitHub: cmcpmrc/pmrc-data
-  - 워크샵 리스트 엑셀 파일 (workshop.pmrc.xlsx)
-  - pubmed.search.txt (연구성과 PubMed 검색어)
-  - 세미나 발표자/제목 등 비공개 메모
-  - 기타 웹사이트에 직접 게시되지 않는 원본 자료
+### C:\pmrc-web (public) — 기본 작업 폴더
+- GitHub: https://github.com/cmcpmrc/pmrc-web
+- VS Code + Claude Code 작업은 기본적으로 이 폴더에서 진행
+- 실제 웹사이트 결과물만 관리 (HTML, CSS, JS, 이미지, PDF 등 사이트에 게시되는 파일)
+- 워크샵 엑셀, PubMed 검색어 등 원본/민감 데이터는 절대 커밋하지 않음
+  (과거 커밋 기록에 남아있던 workshop.pmrc.xlsx, pubmed.search.txt는 filter-repo로 완전 삭제 완료)
 
-### 작업 방식
-- 콘텐츠 업데이트 시 C:\pmrc-data의 최신 원본 파일을 참고해서 C:\pmrc-web의 결과물(HTML 등)을 수정한다.
-- 두 저장소는 기술적으로 연결되어 있지 않다 — 로컬에서 사람이 지시하는 방식으로 데이터를 참고한다.
+### C:\pmrc-data (private) — 원본 자료 보관용, 필요 시에만 열어서 작업
+- GitHub: https://github.com/cmcpmrc/pmrc-data
+- 워크샵 리스트 엑셀 파일
+- pubmed.search.txt (연구성과 PubMed 검색어)
+- 세미나 발표자/제목 등 비공개 메모
+- 기타 웹사이트에 직접 게시되지 않는 원본 자료
+
+### 작업 흐름
+- 평소 작업은 C:\pmrc-web을 열어서 진행한다.
+- 콘텐츠 업데이트 시 C:\pmrc-data의 최신 원본 파일 경로를 알려주면, 그 내용을 참고해서
+  C:\pmrc-web의 결과물(HTML 등)을 수정한다.
+- 두 저장소는 기술적으로 연결되어 있지 않다 — 사람이 지시하는 방식으로 로컬에서
+  데이터를 참고한다.
   (예외: tools/sync-workshops.py는 같은 상위 폴더에 pmrc-data가 clone되어 있다고 가정하고
   `../pmrc-data/workshop.pmrc.xlsx`를 읽는다.)
-- pmrc-web에는 원본 데이터 파일(엑셀, txt 등)을 절대 커밋하지 않는다.
 - 데이터가 업데이트되면 pmrc-data에 별도로 add → commit → push한다.
+- pmrc-web에는 결과물만 add → commit → push한다.
+
+### 교육정보 - 초청 세미나
+- seminar 폴더(C:\pmrc-web\seminar)에 PDF만 유지한다 (포스터 이미지는 웹사이트에 노출하지 않음).
+- 새 세미나 추가 시 날짜 + PDF 다운로드 링크로만 카드를 구성한다 (포스터 썸네일 표시 안 함).
+- 발표자 개인 사진이 포함된 이미지 파일은 pmrc-web에 두지 않고 저장소에도 커밋하지 않는다.
+- 기존에 seminar 폴더/education.html에 있던 포스터 썸네일 이미지·발표자 사진은 제거 완료
+  (2026-08-06, 과거 커밋 기록도 filter-repo로 삭제).
 
 ## 작업 방식 (일반)
 
@@ -48,7 +62,7 @@ research.html   연구성과     — PubMed 연동 논문 / 특허 / 학술활�
 services.html   분석서비스   — 대표 서비스 항목 / 신청방법
 equipment.html  장비소개     — 보유 장비 5종
 education.html  교육정보     — 분석 워크샵 3종 / 교육 워크샵 목록(표) /
-                              초청세미나 공고문·현장 사진
+                              초청세미나 (날짜 + 공고문 PDF 링크)
 notice.html     (메뉴에서 제외) 예전 공지사항 페이지. 어느 메뉴에서도 링크하지 않는다.
                 내용은 education.html로 옮겨졌다.
 
@@ -60,9 +74,8 @@ en/equipment.html      Equipment
 en/education.html      Training Programs
                        (영문판에는 공지사항에 해당하는 페이지가 없다)
 
-seminar/               초청세미나 원본 자료(공고문 pdf + 현장 사진). 커밋 대상이다.
-                       사이트에서 링크하지는 않지만 Pages가 저장소 전체를 서빙하므로
-                       cmcpmrc.github.io/pmrc-web/seminar/<날짜>.pdf 로 접근된다.
+seminar/               초청세미나 공고문 pdf만 보관한다 (현장 사진·포스터 이미지는 없음).
+                       education.html 카드의 "공고문 PDF 보기" 링크가 여기를 직접 연다.
                        공개해도 된다는 확인을 받았다(2026-07-27).
 tools/sync-workshops.py  ../pmrc-data/workshop.pmrc.xlsx -> education.html + en/education.html 표 동기화
                        (엑셀 자체는 pmrc-data 저장소에 있다. 위 '저장소 구조' 참고)
@@ -123,19 +136,18 @@ JS 안에서 클래스를 새로 쓰면 반드시 `npm run build:css`를 다시 
 
 ## 초청세미나 자료 추가 (education.html)
 
-`seminar/<YYYYMMDD>.pdf`(공고문)를 넣은 뒤 1400x1050(4:3) JPG로 변환해
-`assets/img/seminar-<YYYYMMDD>-poster.jpg`로 저장하고, education.html `#seminars`의
-`<article>`을 최신이 위에 오도록 하나 복제해 채운다(포스터 이미지 하나만 있는
-`<div class="mt-7 max-w-md">` 블록). 원본 pdf도 seminar/ 에 함께 커밋한다.
+`seminar/<YYYYMMDD>.pdf`(공고문) 하나만 저장소에 넣으면 된다. **이미지 변환은
+필요 없다** — education.html `#seminars`의 `<article>`을 최신이 위에 오도록 하나
+복제해 채우고, 본문은 날짜 + 발표자/장소 텍스트, 첨부는 `seminar/<YYYYMMDD>.pdf`로
+바로 여는 "공고문 PDF 보기" 링크(`<div class="mt-7">` 안의 `<a>`) 하나뿐이다.
 
-**현장 사진(참석자 등 개인이 나오는 사진)은 사이트에 게시하지 않는다.** 예전에는
-`-photo.jpg`로 변환해 포스터 옆에 나란히 실었지만(2026-08-06 제거), 개인정보 문제로
-중단했다. 현장 사진 원본이 있어도 seminar/ 에 커밋하지 말 것 — 필요하면 `pmrc-data`
-쪽에 둔다.
+**포스터 썸네일·현장 사진 등 이미지는 사이트에 올리지 않는다** (2026-08-06 제거,
+과거 커밋 기록도 filter-repo로 삭제). 공고문 포스터에 발표자 개인 사진이 들어있는
+경우가 많아, 이미지로 추출해 상시 노출하는 대신 PDF 링크로만 접근하게 한다. 현장
+사진 원본이 있어도 seminar/ 에 커밋하지 말 것 — 필요하면 `pmrc-data` 쪽에 둔다.
 
 발표자명·제목은 파일명(날짜)만으로는 알 수 없다. `pmrc-data`에 관련 비공개 메모가
-있으면 그걸 참고하고, 없으면 지어내지 말고 날짜 + 포스터(공고문 pdf) 정도로만 카드를
-구성한다.
+있으면 그걸 참고하고, 없으면 지어내지 말고 날짜 + PDF 링크 정도로만 카드를 구성한다.
 
 ## 교육 워크샵 추가·수정 (education.html)
 
