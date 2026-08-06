@@ -23,7 +23,7 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
-XLSX = ROOT / 'workshop.pmrc.xlsx'
+XLSX = ROOT.parent / 'pmrc-data' / 'workshop.pmrc.xlsx'
 NS = '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}'
 EXCEL_EPOCH = date(1899, 12, 30)
 
@@ -44,7 +44,8 @@ ROW = '''              <tr class="border-b border-white/5 transition-colors last
 def read_xlsx():
     """[(date, ko, en), ...] 를 최신순으로 돌려준다."""
     if not XLSX.exists():
-        sys.exit(f'없음: {XLSX}\n  원본 엑셀이 있어야 한다. git clone 했다면 함께 받아진다.')
+        sys.exit(f'없음: {XLSX}\n  원본 엑셀은 pmrc-web과 같은 상위 폴더의 pmrc-data 저장소에 있다 '
+                 f'(github.com/cmcpmrc/pmrc-data, private). 그 저장소를 clone 했는지 확인할 것.')
 
     z = zipfile.ZipFile(XLSX)
     shared = []
