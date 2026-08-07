@@ -189,8 +189,21 @@ npm run build:css
 ## 배포
 
 `main` 브랜치 push → GitHub Pages 자동 배포. 빌드 단계 없음.
-GitHub: `cmcpmrc/pmrc-web` · 현재 https://cmcpmrc.github.io/pmrc-web/ ·
-커스텀 도메인(www.pmrc.re.kr)은 아직 미연결.
+GitHub: `cmcpmrc/pmrc-web` · https://cmcpmrc.github.io/pmrc-web/ (Pages 기본 URL) ·
+실제 서비스 주소는 커스텀 도메인 www.pmrc.re.kr (아래 '도메인 연결' 참고).
+
+## 도메인 연결 (www.pmrc.re.kr)
+
+- 실제 서비스 도메인: https://www.pmrc.re.kr (구 Google Sites 홈페이지 대체 완료)
+- 영문 페이지: https://www.pmrc.re.kr/en/ (서브폴더 방식)
+  - en.pmrc.re.kr 서브도메인은 더 이상 사용하지 않음 (기존 Google Sites 연결 DNS 레코드 삭제 완료)
+- 도메인 등록기관: 반값도메인 (실제 네임서버는 ns1/ns2.clickdomain.co.kr)
+- DNS 설정 (반값도메인 > 부가서비스 > 네임서비스):
+  - CNAME: www → cmcpmrc.github.io
+  - A레코드: pmrc.re.kr (apex, 공백 호스트) → 185.199.108.153
+- GitHub Pages 저장소(cmcpmrc/pmrc-web) Settings > Pages > Custom domain: www.pmrc.re.kr
+- Enforce HTTPS 활성화 완료
+- DNS 반영은 반값도메인 특성상 시간이 걸릴 수 있음 (지난 사례 기준 몇 시간~하루 정도)
 
 ## 확인 방법
 
